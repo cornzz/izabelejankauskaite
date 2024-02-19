@@ -38,14 +38,16 @@
 				entries.forEach((entry) => {
 					const top = entry.boundingClientRect.top
 					const bottom = entry.boundingClientRect.bottom
-					const threshold = innerHeight * 1/3
+					const threshold = innerHeight / 3
 					if (!scrolling && top < threshold && bottom > threshold) {
 						menuItemsOffset = links.indexOf(entry.target.id) + 1
 					}
 				})
 			},
 			{
-				threshold: Array(10).fill(1).map((_, i) => (i + 1) / 10)
+				threshold: Array(10)
+					.fill(1)
+					.map((_, i) => (i + 1) / 10)
 			}
 		)
 
@@ -69,7 +71,7 @@
 >
 	<div
 		class="flex flex-col lowercase transition-transform duration-500"
-        class:!transition-none={!ready}
+		class:!transition-none={!ready}
 		style="transform: translateY(-{!open ? menuItemsOffset * 3 : 0}rem)"
 		bind:this={menuItems}
 	>

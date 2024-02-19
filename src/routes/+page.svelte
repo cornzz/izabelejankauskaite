@@ -3,12 +3,14 @@
 
 	const links = ['biography', 'calendar', 'gallery', 'contact']
 
+	let scrollY: number = 0
 	let navigation: Navigation
 </script>
 
 <header
 	class="fixed top-0 z-0 h-screen w-screen bg-[url('/images/home-small.webp')] bg-cover
 		   bg-[center_69%] px-4 py-2 md:bg-[size:100%_auto] lg:bg-[url('/images/home.webp')]"
+	style="transform: translate3d(0, calc(-0.2 * {scrollY}px), 0)"
 >
 	<nav class="animate-fadein-slow ps-2 pt-6 opacity-0 sm:ps-6 sm:pt-10">
 		<a
@@ -32,6 +34,8 @@
 		</div>
 	</nav>
 </header>
+
+<svelte:window bind:scrollY />
 
 <Navigation {links} bind:this={navigation} />
 
