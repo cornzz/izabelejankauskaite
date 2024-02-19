@@ -5,7 +5,7 @@
     let section: HTMLElement
 </script>
 
-<div
+<section
 	id="biography"
 	class="relative z-10 flex min-h-screen flex-col justify-end bg-[aliceblue] py-20 md:flex-row"
     bind:this={section}
@@ -61,7 +61,7 @@
 			{!showMore ? 'Show More' : 'Show Less'}
 		</button>
 	</div>
-</div>
+</section>
 
 <style lang="postcss">
 	p {
