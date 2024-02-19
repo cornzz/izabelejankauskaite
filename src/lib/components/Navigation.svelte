@@ -38,20 +38,19 @@
 				entries.forEach((entry) => {
 					const top = entry.boundingClientRect.top
 					const bottom = entry.boundingClientRect.bottom
-					if (!scrolling && top < innerHeight / 2 && bottom > innerHeight / 2) {
+					const threshold = innerHeight * 1/3
+					if (!scrolling && top < threshold && bottom > threshold) {
 						menuItemsOffset = links.indexOf(entry.target.id) + 1
 					}
 				})
 			},
 			{
-				threshold: Array(10)
-					.fill(1)
-					.map((_, i) => (i + 1) / 10)
+				threshold: Array(10).fill(1).map((_, i) => (i + 1) / 10)
 			}
 		)
 
 		document.querySelectorAll('section').forEach((section) => observer.observe(section))
-		setTimeout(() => (ready = true), 10)
+		setTimeout(() => (ready = true), 50)
 
 		return () => observer.disconnect()
 	})
