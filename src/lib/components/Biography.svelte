@@ -2,17 +2,14 @@
 	import { slide } from 'svelte/transition'
 
 	let showMore: boolean = false
-    let section: HTMLElement
+	let section: HTMLElement
 </script>
 
-<section
-	id="biography"
-    bind:this={section}
->
-	<div class="px-12 py-[3.75rem] md:w-1/2 mx-auto lg:px-32">
+<section id="biography" class="flex flex-col px-6 md:block lg:flex lg:flex-row lg:px-0" bind:this={section}>
+	<div class="mx-auto px-6 py-[3.75rem] md:float-left md:w-1/2 md:pr-[4.5rem] lg:float-none lg:px-32">
 		<img class="max-h-[75vh] max-w-full" src="/images/biography.webp" alt="Portrait - Izabelė Jankauskaitė" />
 	</div>
-	<div class="px-6 leading-loose md:w-1/2 lg:pl-0 lg:pr-12">
+	<div class="inline leading-loose lg:w-1/2 lg:pl-0 lg:pr-12">
 		<h1 class="mb-5 text-2xl">Biography</h1>
 		<p>
 			The 25-year-old Lithuanian conductor Izabelė Jankauskaitė first attracted international attention in 2022 when she
@@ -53,10 +50,13 @@
 			</div>
 		{/if}
 		<br />
-		<button class="underline" on:click={() => {
-            showMore = !showMore
-            if (!showMore) section.scrollIntoView()
-        }}>
+		<button
+			class="underline"
+			on:click={() => {
+				showMore = !showMore
+				if (!showMore) section.scrollIntoView()
+			}}
+		>
 			{!showMore ? 'Show More' : 'Show Less'}
 		</button>
 	</div>

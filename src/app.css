@@ -15,6 +15,6 @@
     }
 
     section {
-        @apply relative z-10 flex min-h-screen flex-col  bg-[aliceblue] py-20 md:flex-row;
+        @apply relative z-10 min-h-screen bg-[aliceblue] py-20;
     }
 }
