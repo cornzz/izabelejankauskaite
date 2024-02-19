@@ -10,7 +10,7 @@
     bind:this={section}
 >
 	<div class="px-12 py-[3.75rem] md:w-1/2 mx-auto lg:px-32">
-		<img class="max-h-[75vh] max-w-full" src="/images/biography.jpg" alt="Portrait - Izabelė Jankauskaitė" />
+		<img class="max-h-[75vh] max-w-full" src="/images/biography.webp" alt="Portrait - Izabelė Jankauskaitė" />
 	</div>
 	<div class="px-6 leading-loose md:w-1/2 lg:pl-0 lg:pr-12">
 		<h1 class="mb-5 text-2xl">Biography</h1>

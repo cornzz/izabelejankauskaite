@@ -7,8 +7,8 @@
 </script>
 
 <header
-	class="fixed top-0 z-0 h-screen w-screen bg-[url('/images/home.jpg')]
-		   bg-cover bg-[center_69%] px-4 py-2 sm:bg-[size:100%_auto]"
+	class="fixed top-0 z-0 h-screen w-screen bg-[url('/images/home-small.webp')] bg-cover
+		   bg-[center_69%] px-4 py-2 sm:bg-[size:100%_auto] lg:bg-[url('/images/home.webp')]"
 >
 	<nav class="ps-2 pt-6 sm:ps-6 sm:pt-10">
 		<a
