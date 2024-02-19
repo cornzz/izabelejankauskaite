@@ -2,6 +2,8 @@
 	import { Biography, Calendar, Gallery, Contact, Navigation } from '$lib'
 
 	const links = ['biography', 'calendar', 'gallery', 'contact']
+
+	let navigation: Navigation
 </script>
 
 <header
@@ -16,20 +18,21 @@
 		>
 			Izabelė Jankauskaitė
 		</a>
-		<ul class="flex w-fit flex-col gap-4 ps-1 pt-36 lowercase sm:pt-10">
+		<div class="flex w-fit flex-col gap-4 ps-1 pt-36 lowercase sm:pt-10">
 			{#each links as link}
-				<li
-					class="transition-all duration-[.25s] ease-in-out hover:translate-x-[5px]
-						   hover:transform hover:blur-[2px] hover:filter"
+				<button
+					class="text-left transition-all duration-[.25s] ease-in-out
+						   hover:translate-x-[5px] hover:transform hover:blur-[2px] hover:filter"
+					on:click={() => navigation.setActive(link)}
 				>
 					<a href="#{link}">{link}</a>
-				</li>
+				</button>
 			{/each}
-		</ul>
+		</div>
 	</nav>
 </header>
 
-<Navigation {links} />
+<Navigation {links} bind:this={navigation} />
 
 <div class="mt-[100vh]"></div>
 

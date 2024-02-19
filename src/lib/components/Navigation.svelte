@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { clickOutside } from '$lib/helpers'
 	import { onMount } from 'svelte'
 
 	export let links: string[]
@@ -9,13 +10,25 @@
 	let menu: HTMLElement
 	let menuItems: HTMLElement
 	let menuItemsOffset: number = 0
+	let scrolling: boolean = false
 	let ready: boolean = false
 
-	function toggleMenu(event: MouseEvent) {
-		if (!open && event.target instanceof HTMLAnchorElement) {
-			event.preventDefault()
+	export function setActive(id: string): void {
+		menuItemsOffset = links.indexOf(id) + 1
+		scrolling = true
+		setTimeout(() => (scrolling = false), 500)
+	}
+
+	function toggleMenu(event: MouseEvent | null, forceClose: boolean = false): void {
+		open = forceClose ? false : !open
+		if (event?.target instanceof HTMLAnchorElement) {
+			if (open) {
+				event.preventDefault()
+			} else {
+				const id = event.target.href.split('#')[1]
+				setActive(id)
+			}
 		}
-		open = !open
 		menu.style.minHeight = open ? `${menuItems.scrollHeight}px` : '0'
 	}
 
@@ -25,7 +38,7 @@
 				entries.forEach((entry) => {
 					const top = entry.boundingClientRect.top
 					const bottom = entry.boundingClientRect.bottom
-					if (top < innerHeight / 2 && bottom > innerHeight / 2) {
+					if (!scrolling && top < innerHeight / 2 && bottom > innerHeight / 2) {
 						menuItemsOffset = links.indexOf(entry.target.id) + 1
 					}
 				})
@@ -38,7 +51,7 @@
 		)
 
 		document.querySelectorAll('section').forEach((section) => observer.observe(section))
-		setTimeout(() => (ready = true), 100)
+		setTimeout(() => (ready = true), 10)
 
 		return () => observer.disconnect()
 	})
@@ -49,9 +62,10 @@
 <button
 	class="fixed top-0 z-50 flex h-12 min-h-0 w-full transform justify-between overflow-hidden bg-[aliceblue]
            px-8 shadow-lg transition-all duration-300
-		   {scrollY >= innerHeight - 10 ? 'translate-y-0' : '-translate-y-16'}"
+		   {open || scrollY >= innerHeight - 10 ? 'translate-y-0' : '-translate-y-16'}"
 	class:!transition-none={!ready}
 	on:click={toggleMenu}
+	use:clickOutside={() => toggleMenu(null, true)}
 	bind:this={menu}
 >
 	<div
