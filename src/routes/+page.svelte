@@ -25,7 +25,7 @@
 			{#each links as link}
 				<button
 					class="text-left transition-all duration-[.25s] ease-in-out
-						   hover:translate-x-[5px] hover:transform hover:blur-[2px] hover:filter"
+						   hover-d:translate-x-[5px] hover-d:transform hover-d:blur-[2px] hover-d:filter"
 					on:click={() => navigation.setActive(link)}
 				>
 					<a href="#{link}">{link}</a>

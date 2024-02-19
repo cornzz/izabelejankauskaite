@@ -13,7 +13,8 @@ export default {
 				}
 			},
 			screens: {
-				'low-aspect-ratio': { raw: '(max-aspect-ratio: 3/4)' }
+				'low-aspect-ratio': { raw: '(max-aspect-ratio: 3/4)' },
+				'hover-d': { raw: '(hover: hover)' }
 			}
 		}
 	},

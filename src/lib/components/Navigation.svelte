@@ -16,7 +16,7 @@
 	export function setActive(id: string): void {
 		menuItemsOffset = links.indexOf(id) + 1
 		scrolling = true
-		setTimeout(() => (scrolling = false), 500)
+		setTimeout(() => (scrolling = false), 600)
 	}
 
 	function toggleMenu(event: MouseEvent | null, forceClose: boolean = false): void {
@@ -70,7 +70,7 @@
 	bind:this={menu}
 >
 	<div
-		class="flex flex-col lowercase transition-transform duration-500"
+		class="flex flex-col lowercase transition-transform duration-[.4s]"
 		class:!transition-none={!ready}
 		style="transform: translateY(-{!open ? menuItemsOffset * 3 : 0}rem)"
 		bind:this={menuItems}
