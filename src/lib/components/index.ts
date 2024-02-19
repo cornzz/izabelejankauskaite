@@ -1,2 +1,5 @@
 export { default as Biography } from './Biography.svelte'
+export { default as Calendar } from './Calendar.svelte'
+export { default as Gallery } from './Gallery.svelte'
+export { default as Contact } from './Contact.svelte'
 export { default as Navigation } from './Navigation.svelte'

@@ -13,4 +13,8 @@
     body {
         @apply max-w-full overflow-x-hidden;
     }
+
+    section {
+        @apply relative z-10 flex min-h-screen flex-col  bg-[aliceblue] py-20 md:flex-row;
+    }
 }

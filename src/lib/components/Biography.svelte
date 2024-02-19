@@ -7,7 +7,6 @@
 
 <section
 	id="biography"
-	class="relative z-10 flex min-h-screen flex-col justify-end bg-[aliceblue] py-20 md:flex-row"
     bind:this={section}
 >
 	<div class="px-12 py-[3.75rem] md:w-1/2 mx-auto lg:px-32">

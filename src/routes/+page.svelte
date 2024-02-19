@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Biography, Navigation } from '$lib'
+	import { Biography, Calendar, Gallery, Contact, Navigation } from '$lib'
 
 	const links = ['biography', 'calendar', 'gallery', 'contact']
 </script>
@@ -34,3 +34,9 @@
 <div class="mt-[100vh]"></div>
 
 <Biography />
+
+<Calendar />
+
+<Gallery />
+
+<Contact />
