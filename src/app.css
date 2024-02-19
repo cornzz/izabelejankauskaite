@@ -7,6 +7,10 @@
 @layer base {
     :root {
         font-family: 'Montserrat', sans-serif;
-        @apply bg-gray-500 text-white font-bold;
+        @apply text-[#333] scroll-smooth;
+    }
+
+    body {
+        @apply max-w-full overflow-x-hidden;
     }
 }
