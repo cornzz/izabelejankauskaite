@@ -14,18 +14,18 @@
 >
 	<nav class="animate-fadein-slow ps-2 pt-6 opacity-0 sm:ps-6 sm:pt-10">
 		<a
-			class="low-aspect-ratio:text-white low-aspect-ratio:border-solid low-aspect-ratio:pl-5 inline-block
-					border-l-[5px] border-none border-white text-3xl font-extralight text-inherit [word-spacing:9999px]
-					sm:pl-0 sm:text-5xl sm:[word-spacing:normal]"
+			class="inline-block border-l-[5px] border-none border-white text-3xl
+				   font-extralight text-inherit [word-spacing:9999px] sm:pl-0 sm:text-5xl sm:[word-spacing:normal]
+				   low-aspect-ratio:border-solid low-aspect-ratio:pl-5 low-aspect-ratio:text-white"
 			href="/"
 		>
 			Izabelė Jankauskaitė
 		</a>
-		<div class="flex w-fit flex-col gap-4 ps-1 low-aspect-ratio:pt-[18vh] lowercase pt-10">
+		<div class="flex w-fit flex-col gap-4 ps-1 pt-10 lowercase low-aspect-ratio:pt-[18vh]">
 			{#each links as link}
 				<button
-					class="text-left transition-all duration-[.25s] ease-in-out
-						   hover-d:translate-x-[5px] hover-d:transform hover-d:blur-[2px] hover-d:filter"
+					class="text-left transition-all duration-[.25s] ease-in-out hover-d:hover:translate-x-[5px]
+						   hover-d:hover:transform hover-d:hover:blur-[2px] hover-d:hover:filter"
 					on:click={() => navigation.setActive(link)}
 				>
 					<a href="#{link}">{link}</a>
