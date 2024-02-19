@@ -1,21 +1,10 @@
 <script lang="ts">
-	import { Biography, Calendar, Gallery, Contact, Navigation } from '$lib'
-	import { onMount } from 'svelte'
+	import { Biography, Calendar, Contact, Gallery, Navigation } from '$lib'
 
 	const links = ['biography', 'calendar', 'gallery', 'contact']
 
 	let scrollY: number = 0
-	let header: HTMLElement
 	let navigation: Navigation
-
-	function updateParallax() {
-		const parallaxSpeed = -0.2
-		header.style.transform = `translate3d(0, ${scrollY * parallaxSpeed}px, 0)`
-
-		requestAnimationFrame(updateParallax)
-	}
-
-	onMount(() => requestAnimationFrame(updateParallax))
 </script>
 
 <svelte:window bind:scrollY />
@@ -23,7 +12,7 @@
 <header
 	class="fixed top-0 z-0 h-screen w-screen bg-[url('/images/home-small.webp')] bg-cover
 		   bg-[center_69%] px-4 py-2 md:bg-[size:100%_auto] lg:bg-[url('/images/home.webp')]"
-	bind:this={header}
+	style="transform: translate3d(0, calc(-0.2 * {scrollY}px), 0)"
 >
 	<nav class="animate-fadein-slow ps-2 pt-6 opacity-0 sm:ps-6 sm:pt-10">
 		<a
