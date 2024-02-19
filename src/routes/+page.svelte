@@ -10,15 +10,15 @@
 	class="fixed top-0 z-0 h-screen w-screen bg-[url('/images/home-small.webp')] bg-cover
 		   bg-[center_69%] px-4 py-2 sm:bg-[size:100%_auto] lg:bg-[url('/images/home.webp')]"
 >
-	<nav class="ps-2 pt-6 sm:ps-6 sm:pt-10">
+	<nav class="animate-fadein-slow ps-2 pt-6 opacity-0 sm:ps-6 sm:pt-10">
 		<a
-			class="inline-block text-3xl font-extralight text-white [word-spacing:9999px]
-				   sm:text-5xl sm:text-inherit sm:[word-spacing:normal]"
+			class="inline-block border-l-[5px] border-white pl-5 text-3xl font-extralight text-white
+				   [word-spacing:9999px] sm:border-none sm:pl-0 sm:text-5xl sm:text-inherit sm:[word-spacing:normal]"
 			href="/"
 		>
 			Izabelė Jankauskaitė
 		</a>
-		<div class="flex w-fit flex-col gap-4 ps-1 pt-36 lowercase sm:pt-10">
+		<div class="flex w-fit flex-col gap-4 ps-1 pt-[18vh] lowercase sm:pt-10">
 			{#each links as link}
 				<button
 					class="text-left transition-all duration-[.25s] ease-in-out
