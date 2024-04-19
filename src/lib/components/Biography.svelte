@@ -38,7 +38,7 @@
 
 <svelte:window bind:innerWidth />
 
-<section id="biography" class="flex flex-col px-6 md:block xl:flex xl:flex-row xl:px-0" bind:this={section}>
+<section id="biography" class="flex flex-col px-6 py-20 md:block xl:flex xl:flex-row xl:px-0" bind:this={section}>
 	<div class="mx-auto px-6 py-[3.75rem] md:float-left md:w-1/2 md:pr-[4.5rem] xl:float-none xl:px-32">
 		<img
 			class="max-h-[75vh] max-w-full xl:sticky xl:top-[100px] 2xl:static"
@@ -63,7 +63,7 @@
 			class="underline"
 			on:click={() => {
 				showMore = !showMore
-				if (!showMore) section.scrollIntoView()
+				// if (!showMore) section.scrollIntoView()
 			}}
 		>
 			{!showMore ? 'Show More' : 'Show Less'}

@@ -17,7 +17,7 @@ export const events: Event[] = [
     },
     {
         dates: '19th, 20th and 21st of April 2024',
-        title: 'Landesjugendsinfonieorchester Hessen',
+        title: 'Landesjugend&shy;sinfonieorchester Hessen',
         link: 'https://www.tauberphilharmonie.de/programm-tickets/veranstaltung/landesjugendorchester-hessen',
         lastDate: new Date('4/21/2024')
     },
