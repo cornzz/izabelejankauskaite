@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Biography, Calendar, Contact, Gallery, Navigation } from '$lib'
 
-	const links = ['biography', 'calendar', 'gallery', 'contact']
+	const links = ['biography', 'calendar', /*'gallery',*/ 'contact']
 
 	let scrollY: number = 0
 	let navigation: Navigation
@@ -45,6 +45,6 @@
 
 <Calendar />
 
-<Gallery />
+<!-- <Gallery /> -->
 
 <Contact />
