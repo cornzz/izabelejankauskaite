@@ -15,7 +15,7 @@
 
 <svelte:window bind:scrollY bind:innerHeight />
 
-<section id="calendar" class="flex flex-col pt-12 lg:pt-0 lg:flex-row" bind:this={section}>
+<section id="calendar" class="flex flex-col pt-12 lg:flex-row" bind:this={section}>
 	<div class="relative w-full bg-[aliceblue] lg:sticky lg:top-12 lg:h-0">
 		<img
 			src="/images/calendar.webp"
@@ -36,7 +36,7 @@
 		{/if}
 		{#each events.filter((ev) => !ev.lastDate || yesterday < ev.lastDate) as event}
 			<div class="mb-12 last:mb-0">
-				<h2 class="mb-1 text-2xl transition-all">{@html event.title}</h2>
+				<h2 class="mb-1 text-xl lg:text-2xl transition-all">{@html event.title}</h2>
 				<p class="italic">{event.dates}</p>
 				{#if event.link}
 					<a class="group mt-2 underline" href={event.link} target="_blank">
