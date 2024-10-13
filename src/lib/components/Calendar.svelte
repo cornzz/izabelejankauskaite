@@ -6,6 +6,7 @@
 	let section: HTMLElement
 	let scrollY: number = 0
 	let innerHeight: number = 0
+	let showPast: boolean = false
 
 	$: titleTop =
 		scrollY + innerHeight < section?.offsetTop
@@ -30,13 +31,13 @@
 			Calendar
 		</h1>
 	</div>
-	<div class="relative flex flex-col justify-center bg-[aliceblue] px-6 py-20 lg:w-1/2 lg:pl-8 lg:pr-24">
+	<div class="relative bg-[aliceblue] px-6 py-20 lg:w-1/2 lg:pl-8 lg:pr-24">
 		{#if !events.filter((ev) => !ev.lastDate || yesterday < ev.lastDate).length}
-			<p class="text-lg">No upcoming events.</p>
+			<p class="text-lg">No upcoming dates.</p>
 		{/if}
 		{#each events.filter((ev) => !ev.lastDate || yesterday < ev.lastDate) as event}
 			<div class="mb-12 last:mb-0">
-				<h2 class="mb-1 text-xl lg:text-2xl transition-all">{@html event.title}</h2>
+				<h2 class="mb-1 text-xl transition-all lg:text-2xl">{@html event.title}</h2>
 				<p class="italic">{event.dates}</p>
 				{#if event.link}
 					<a class="group mt-2 underline" href={event.link} target="_blank">
@@ -46,5 +47,28 @@
 				{/if}
 			</div>
 		{/each}
+		<button
+			on:click={() => {
+				showPast = !showPast
+				scrollY = scrollY + 1
+			}}
+			class="mt-6 underline w-full"
+		>
+			{showPast ? 'Hide' : 'Show'} past dates
+		</button>
+		<div class="{showPast ? '' : 'hidden'} mt-12">
+			{#each events.filter((ev) => ev.lastDate && yesterday >= ev.lastDate).reverse() as event}
+				<div class="mb-12 last:mb-0">
+					<h2 class="mb-1 text-xl transition-all lg:text-2xl">{@html event.title}</h2>
+					<p class="italic">{event.dates}</p>
+					{#if event.link}
+						<a class="group mt-2 underline" href={event.link} target="_blank">
+							Tickets / More
+							<span class="-ml-3 opacity-0 transition-all group-hover:ml-0 group-hover:opacity-100"> &nbsp;→ </span>
+						</a>
+					{/if}
+				</div>
+			{/each}
+		</div>
 	</div>
 </section>
