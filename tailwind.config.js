@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
 			animation: {
-				'fadein-slow': 'fadein 1s ease-in-out .5s forwards'
+				'fadein-slow': 'fadein 1s ease-in-out .25s forwards'
 			},
 			keyframes: {
 				'fadein': {
@@ -13,7 +13,7 @@ export default {
 				}
 			},
 			screens: {
-				'low-aspect-ratio': { raw: '(max-aspect-ratio: 3/4)' },
+				'low-aspect-ratio': { raw: '(max-width: 640px) and (max-aspect-ratio: 3/4)' },
 				'hover-d': { raw: '(hover: hover)' }
 			}
 		}

@@ -1,4 +1,4 @@
-<section id="contact" class="flex flex-col justify-center pt-12 text-center">
+<section id="contact" class="flex flex-col justify-center pt-24 pb-12 text-center">
 	<div class="flex h-full flex-col gap-6 align-middle lg:gap-10">
 		<h1 class="mb-4 text-2xl">Contact</h1>
 		<div class="leading-8">
