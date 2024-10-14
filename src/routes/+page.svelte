@@ -7,9 +7,13 @@
 
 	let scrollY: number = 0
 	let navigation: Navigation
+	let year: number
 	let v2: boolean = false
 
-	onMount(() => v2 = $page.url.searchParams.has('2'))
+	onMount(() => {
+		year = new Date().getFullYear()
+		v2 = $page.url.searchParams.has('2')
+	})
 </script>
 
 <svelte:window bind:scrollY />
@@ -28,7 +32,7 @@
 		>
 			Izabelė Jankauskaitė
 		</a>
-		<div class="flex w-fit flex-col gap-4 pl-1 pt-10 lowercase text-white low-aspect-ratio:pt-[50vh] buttons">
+		<div class="buttons flex w-fit flex-col gap-4 pl-1 pt-10 lowercase text-white low-aspect-ratio:pt-[50vh]">
 			{#each links as link}
 				<button
 					class="text-left transition-all duration-[.25s] ease-in-out hover-d:hover:translate-x-[5px]
@@ -53,6 +57,12 @@
 <!-- <Gallery /> -->
 
 <Contact />
+
+<footer class="flex flex-col items-center justify-center gap-x-2 bg-[aliceblue] py-2 text-sm sm:flex-row">
+	<span>© {year ?? '20XX'} Izabelė Jankauskaitė</span>
+	<span class="hidden sm:block">|</span>
+	<span>Design by <a href="https://corny.me" class="underline" target="_blank">corny</a></span>
+</footer>
 
 <style lang="postcss">
 	.version2 {
