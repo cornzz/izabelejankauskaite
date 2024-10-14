@@ -40,9 +40,9 @@
 				<h2 class="mb-1 text-xl transition-all lg:text-2xl">{@html event.title}</h2>
 				<p class="italic">{event.dates}</p>
 				{#if event.link}
-					<a class="group mt-2 underline" href={event.link} target="_blank">
-						Tickets / More
-						<span class="-ml-3 opacity-0 transition-all group-hover:ml-0 group-hover:opacity-100"> &nbsp;→ </span>
+					<a class="group mt-2" href={event.link} target="_blank">
+						<span class="underline">Tickets / More</span>
+						<span class="-ml-3 opacity-0 transition-all group-hover:-ml-1 group-hover:opacity-100"> &nbsp;→ </span>
 					</a>
 				{/if}
 			</div>
@@ -52,9 +52,12 @@
 				showPast = !showPast
 				scrollY = scrollY + 1
 			}}
-			class="mt-6 underline w-full"
+			class="group mt-6 w-full lg:w-auto"
 		>
-			{showPast ? 'Hide' : 'Show'} past dates
+			<span class="underline">{showPast ? 'Hide' : 'Show'} past dates</span>
+			<span class="-ml-3 opacity-0 transition-all group-hover:-ml-1 group-hover:opacity-100">
+				&nbsp;<span class="inline-block transition-all {showPast ? 'translate-y-[2px] rotate-180' : ''}">↓</span>
+			</span>
 		</button>
 		<div class="{showPast ? '' : 'hidden'} mt-12">
 			{#each events.filter((ev) => ev.lastDate && yesterday >= ev.lastDate).reverse() as event}
