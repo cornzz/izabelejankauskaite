@@ -19,8 +19,8 @@
 <svelte:window bind:scrollY />
 
 <header
-	class="fixed top-0 z-0 h-screen w-screen bg-[url('/images/home-new.jpg')] bg-cover bg-[33%_0] bg-no-repeat
-			{v2 ? 'version2' : ''}"
+	class="fixed top-0 z-0 h-screen w-screen bg-[url('/images/home-new.webp')] bg-cover bg-[33%_0] bg-no-repeat"
+	class:v2
 	style="transform: translate3d(0, calc(-0.2 * {scrollY}px), 0)"
 >
 	<nav class="animate-fadein-slow pl-6 pt-8 opacity-0 sm:pl-10 sm:pt-12">
@@ -65,8 +65,8 @@
 </footer>
 
 <style lang="postcss">
-	.version2 {
-		@apply bg-[url('/images/home-new-2.jpg')];
+	.v2 {
+		@apply bg-[url('/images/home-new-2.webp')];
 
 		.buttons {
 			@apply low-aspect-ratio:pt-[37vh];
