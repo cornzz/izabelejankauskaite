@@ -1,16 +1,32 @@
 <script lang="ts">
 	import { events } from '$lib/stores'
+	import { slide } from 'svelte/transition'
+	import CalendarItem from './CalendarItem.svelte'
 
 	const yesterday = new Date(+new Date() - 1000 * 60 * 60 * 24)
 
 	let section: HTMLElement
+	let title: HTMLHeadingElement
 	let scrollY: number = 0
 	let innerHeight: number = 0
+	let titleTop: number = 0
+	let showPast: boolean = false
+	let fixTitle: boolean = false
 
-	$: titleTop =
-		scrollY + innerHeight < section?.offsetTop
-			? 0
-			: 10 + (20 * (scrollY + innerHeight - section?.offsetTop)) / section?.offsetHeight
+	function togglePast() {
+		fixTitle = true
+		title.classList.add('transition-all')
+		showPast = !showPast
+		setTimeout(() => (fixTitle = false), 400)
+		setTimeout(() => title.classList.remove('transition-all'), 550)
+	}
+
+	$: if (!fixTitle) {
+		titleTop =
+			scrollY + innerHeight < section?.offsetTop
+				? 0
+				: 10 + (20 * (scrollY + innerHeight - section?.offsetTop)) / section?.offsetHeight
+	}
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
@@ -26,25 +42,33 @@
 		<h1
 			class="absolute top-12 mb-12 w-full px-12 text-4xl text-white lg:top-0 lg:text-right xl:w-screen xl:text-center"
 			style="margin-top: {titleTop}%"
+			bind:this={title}
 		>
 			Calendar
 		</h1>
 	</div>
-	<div class="relative flex flex-col justify-center bg-[aliceblue] px-6 py-20 lg:w-1/2 lg:pl-8 lg:pr-24">
+	<div class="relative bg-[aliceblue] px-6 py-20 lg:w-1/2 lg:pl-8 lg:pr-24">
 		{#if !events.filter((ev) => !ev.lastDate || yesterday < ev.lastDate).length}
-			<p class="text-lg">No upcoming events.</p>
+			<p class="text-lg">No upcoming dates.</p>
 		{/if}
 		{#each events.filter((ev) => !ev.lastDate || yesterday < ev.lastDate) as event}
-			<div class="mb-12 last:mb-0">
-				<h2 class="mb-1 text-xl lg:text-2xl transition-all">{@html event.title}</h2>
-				<p class="italic">{event.dates}</p>
-				{#if event.link}
-					<a class="group mt-2 underline" href={event.link} target="_blank">
-						Tickets / More
-						<span class="-ml-3 opacity-0 transition-all group-hover:ml-0 group-hover:opacity-100"> &nbsp;→ </span>
-					</a>
-				{/if}
-			</div>
+			<CalendarItem {event} />
 		{/each}
+		<button on:click={togglePast} class="group mt-6 w-full lg:w-auto">
+			<span class="underline">{showPast ? 'Hide' : 'Show'} past dates</span>
+			<span class="-ml-3 opacity-0 transition-all group-hover:-ml-1 group-hover:opacity-100">
+				&nbsp;
+				<span class="inline-block transition-all duration-300 {showPast ? 'translate-y-[2px] rotate-180' : ''}">
+					↓
+				</span>
+			</span>
+		</button>
+		{#key showPast}
+			<div class="{showPast ? '' : 'hidden'} mt-12" transition:slide>
+				{#each events.filter((ev) => ev.lastDate && yesterday >= ev.lastDate).reverse() as event}
+					<CalendarItem {event} />
+				{/each}
+			</div>
+		{/key}
 	</div>
 </section>
