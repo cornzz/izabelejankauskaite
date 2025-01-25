@@ -10,3 +10,5 @@
 </svelte:head>
 
 <slot />
+
+<div class="hidden">Prerendered at: {new Date()}</div>

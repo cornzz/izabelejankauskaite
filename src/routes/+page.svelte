@@ -7,11 +7,9 @@
 
 	let scrollY: number = 0
 	let navigation: Navigation
-	let year: number
 	let v2: boolean = false
 
 	onMount(() => {
-		year = new Date().getFullYear()
 		v2 = $page.url.searchParams.has('2')
 	})
 </script>
@@ -59,9 +57,9 @@
 <Contact />
 
 <footer class="flex flex-col items-center justify-center gap-x-2 bg-[aliceblue] py-2 text-sm sm:flex-row">
-	<span>© {year ?? '20XX'} Izabelė Jankauskaitė</span>
+	<span>© {new Date().getFullYear()} Izabelė Jankauskaitė</span>
 	<span class="hidden sm:block">|</span>
-	<span>Design by <a href="https://corny.me" class="underline" target="_blank">corny</a></span>
+	<span><a href="https://corny.me" class="underline" target="_blank">Design</a></span>
 </footer>
 
 <style lang="postcss">

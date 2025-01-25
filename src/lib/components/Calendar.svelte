@@ -3,7 +3,7 @@
 	import { slide } from 'svelte/transition'
 	import CalendarItem from './CalendarItem.svelte'
 
-	const yesterday = new Date(+new Date() - 1000 * 60 * 60 * 24)
+	const today = new Date(+new Date().setHours(0,0,0,0))
 
 	let section: HTMLElement
 	let title: HTMLHeadingElement
@@ -48,10 +48,10 @@
 		</h1>
 	</div>
 	<div class="relative bg-[aliceblue] px-6 py-20 lg:w-1/2 lg:pl-8 lg:pr-24">
-		{#if !events.filter((ev) => !ev.lastDate || yesterday < ev.lastDate).length}
+		{#if !events.filter((ev) => !ev.lastDate || today <= ev.lastDate).length}
 			<p class="text-lg">No upcoming dates.</p>
 		{/if}
-		{#each events.filter((ev) => !ev.lastDate || yesterday < ev.lastDate) as event}
+		{#each events.filter((ev) => !ev.lastDate || today <= ev.lastDate) as event (event)}
 			<CalendarItem {event} />
 		{/each}
 		<button on:click={togglePast} class="group mt-6 w-full lg:w-auto">
@@ -65,7 +65,7 @@
 		</button>
 		{#key showPast}
 			<div class="{showPast ? '' : 'hidden'} mt-12" transition:slide>
-				{#each events.filter((ev) => ev.lastDate && yesterday >= ev.lastDate).reverse() as event}
+				{#each events.filter((ev) => ev.lastDate && today > ev.lastDate).reverse() as event (event)}
 					<CalendarItem {event} />
 				{/each}
 			</div>
