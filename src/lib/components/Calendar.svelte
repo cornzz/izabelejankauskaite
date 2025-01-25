@@ -1,9 +1,11 @@
 <script lang="ts">
-	import { events } from '$lib/stores'
+	import type { Event } from '$lib/types'
 	import { slide } from 'svelte/transition'
 	import CalendarItem from './CalendarItem.svelte'
 
-	const today = new Date(+new Date().setHours(0,0,0,0))
+	export let events: Event[]
+
+	const today = new Date(+new Date().setHours(0, 0, 0, 0))
 
 	let section: HTMLElement
 	let title: HTMLHeadingElement
@@ -27,6 +29,8 @@
 				? 0
 				: 10 + (20 * (scrollY + innerHeight - section?.offsetTop)) / section?.offsetHeight
 	}
+
+	events.forEach((event) => (event.lastDate = new Date(event.lastDate)))
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
@@ -47,13 +51,15 @@
 			Calendar
 		</h1>
 	</div>
-	<div class="relative bg-[aliceblue] px-6 py-20 lg:w-1/2 lg:pl-8 lg:pr-24">
+	<div class="relative bg-[aliceblue] px-6 py-20 lg:w-1/2 lg:pl-8 lg:pr-12">
 		{#if !events.filter((ev) => !ev.lastDate || today <= ev.lastDate).length}
 			<p class="text-lg">No upcoming dates.</p>
 		{/if}
-		{#each events.filter((ev) => !ev.lastDate || today <= ev.lastDate) as event (event)}
-			<CalendarItem {event} />
-		{/each}
+		<div>
+			{#each events.filter((ev) => !ev.lastDate || today <= ev.lastDate).reverse() as event (event)}
+				<CalendarItem {event} />
+			{/each}
+		</div>
 		<button on:click={togglePast} class="group mt-6 w-full lg:w-auto">
 			<span class="underline">{showPast ? 'Hide' : 'Show'} past dates</span>
 			<span class="-ml-3 opacity-0 transition-all group-hover:-ml-1 group-hover:opacity-100">
@@ -65,7 +71,7 @@
 		</button>
 		{#key showPast}
 			<div class="{showPast ? '' : 'hidden'} mt-12" transition:slide>
-				{#each events.filter((ev) => ev.lastDate && today > ev.lastDate).reverse() as event (event)}
+				{#each events.filter((ev) => ev.lastDate && today > ev.lastDate) as event (event)}
 					<CalendarItem {event} />
 				{/each}
 			</div>

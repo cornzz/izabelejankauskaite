@@ -1,0 +1,140 @@
+# lastDate: MM/DD/YYYY
+
+- title: Zuger Sinfonietta
+  dates: 13th and 14th of December 2025
+  program: |
+    E. Grieg: Two nordic melodies for string orchestra
+    R. Schumann: Klavierkonzert
+    J. Svendsen: Symphony Nr. 2
+  lastDate: 12/14/2025
+
+- title: Münchner Symphoniker
+  dates: 4th of December 2025
+  program: |
+    Béla Bartók: Hungarian pictures  
+    Wolfgang Amadeus Mozart: Klavierkonzert Nr. 20 d-Moll KV 466  
+    Ludwig van Beethoven: Symphonie Nr. 2 D-Dur op. 36 
+  lastDate: 12/4/2025
+
+- title: Jenaer Philharmonie
+  dates: 22nd of November 2025
+  program: |
+    Jean Sibelius: Kurkikohtaus
+    Wilhelm Stenhammar: Excelsior!, Sinfonische Ouvertüre, Op.13 
+    Grieg: Peer Gynt Suite Nr. 1 op. 46 und 2 op. 55
+  lastDate: 11/22/2025
+
+- title: Malmö Symphony Orchestra
+  dates: 13th and 15th of November 2025
+  program: |
+    Gabriela Ortiz: Clara (2021) für Orchester  
+    Clara Schumann: Klavierkonzert a-Moll op. 7 
+    Johannes Brahms: Serenade Nr. 2 A-Dur op. 16 
+  lastDate: 11/15/2025
+
+- title: Helsinki Philharmonic Orchestra
+  dates: 24th and 25th of September 2025
+  lastDate: 9/25/2025
+
+- title: Gulbenkian Orchestra
+  dates: 17th through 19th of July 2025
+  program: |
+    Edward Elgar: Concerto in B minor for Violin and Orchestra, Opus 61
+    Tarrodi: Camelopardalis 
+    Ludwig van Beethoven: Symphony No. 4 in B-flat major, Opus 60
+  lastDate: 7/19/2025
+
+- title: hr-Sinfonieorchester
+  dates: 3rd and 4th of May 2025
+  program: |
+    Music from Mozart, Saint-Saëns, Schumann, Grieg, Elgar & Co.
+  link: https://www.hr-sinfonieorchester.de/konzerte/veranstaltungen-110~_month-2025-05.html
+  lastDate: 5/4/2025
+
+- title: Tonkünstler-Orchester
+  dates: 25th and 26th of April 2025
+  program: |
+    Arvo Pärt Da pacem Domine
+    Carl Maria von Weber Konzert für Klarinette und Orchester Nr. 1 f-Moll op. 73
+    Robert Schumann Symphonie Nr. 1 B-Dur op. 38 Frühlingssymphonie
+  link: https://www.tonkuenstler.at/de/konzerte?date=25-04-2025
+  lastDate: 4/26/2025
+
+- title: Kammerorchester Basel
+  dates: 10th and 11th of April 2025
+  program: |
+    10th of April:
+    Bartók: Divertimento, BB 118 
+    Bartók: Violin Concerto No. 1, BB 48a
+    Schubert: Symphony No. 3 in D major, D. 200
+    11th of April: 
+    Franz Schubert Sinfonie Nr. 3 in D-Dur  
+    Béla Bartók Konzert für Violine und Orchester Nr. 1
+  link: https://www.kammerorchesterbasel.ch/en/concerts.html?location=basel%2Con_the_road&date=2025-4-1
+  lastDate: 4/11/2025
+
+- title: Staatsorchester Darmstadt
+  dates: 2nd and 3rd of March 2025
+  program: |
+    Antonín Dvořák Cellokonzert h-Moll op. 104 
+    Jean Sibelius Sinfonie Nr. 2 D-Dur op. 43 
+  link: https://www.staatstheater-darmstadt.de/veranstaltungen/5-sinfoniekonzert.1754/
+  lastDate: 3/3/2025
+
+- title: Sønderjyllands Symfoniorkester
+  dates: 20th and 21st of February 2025
+  program: |
+    F. Kuhlau: William Shakespeare Overture
+    E. Grieg: Piano concerto
+    L. van Beethoven: Symphony No. 3 (Eroica)
+  link: https://sdjsymfoni.dk/en/program/
+  lastDate: 2/21/2025
+
+- title: Tonhalle-Orchester Zürich
+  dates: 12th and 13th of January 2025
+  link: https://www.tonhalle-orchester.ch/konzerte/kalender/familienkonzert-konferenz-der-tiere-1871224
+  lastDate: 1/13/2025
+
+- title: hr-Sinfonieorchester
+  dates: 1st of January 2025
+  link: https://meisterkonzerte-wiesbaden.de/konzerte/neujahrskonzert-in-wiener-tradition-hr-sinfonieorchester-guido-sant-anna
+  lastDate: 1/1/2025
+
+- title: Theater und Orchester Heidelberg
+  dates: 4th and 5th of December 2024
+  link: https://www.theaterheidelberg.de/de/produktionen/12551-rhapsody
+  lastDate: 12/5/2024
+
+- title: Argovia Philharmonic
+  dates: 25th through 27th of October 2024
+  link: https://argoviaphil.ch/event/loewenkonzert-3
+  lastDate: 10/27/2024
+
+- title: MDR Sinfonieorchester
+  dates: 19th and 20th of October 2024
+  link: https://www.mdr.de/konzerte/konzertkalender/konzert4500_day-20_month-10_year-2024_zc-6fffa2b4.html
+  lastDate: 10/20/2024
+
+- title: Royal Stockholm Philharmonic
+  dates: 1st through 5th of October 2024
+  link: https://www.konserthuset.se/en/programme/calendar/concert/2024/school-concert-baltic-the-environmental-robot/20241001-1100
+  lastDate: 10/5/2024
+
+- title: Kammerorchester Basel
+  dates: 8th of September 2024
+  lastDate: 9/8/2024
+
+- title: Orquesta De Extremadura
+  dates: 9th and 10th of May 2024
+  link: https://www.orquestadeextremadura.com/calendario/
+  lastDate: 5/10/2024
+
+- title: Landesjugend­sinfonieorchester Hessen
+  dates: 19th, 20th and 21st of April 2024
+  link: https://www.tauberphilharmonie.de/programm-tickets/veranstaltung/landesjugendorchester-hessen
+  lastDate: 4/21/2024
+
+- title: Folkwang Kammerorchester
+  dates: 09th of March 2024
+  link: https://www.folkwang-kammerorchester.de/konzerte-zollverein-philharmonie/#a2
+  lastDate: 3/9/2024

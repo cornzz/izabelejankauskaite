@@ -1,17 +1,15 @@
 <script lang="ts">
 	import { page } from '$app/stores'
 	import { Biography, Calendar, Contact, /*Gallery,*/ Navigation } from '$lib'
-	import { onMount } from 'svelte'
+	import type { PageData } from './$types'
+
+	export let data: PageData
 
 	const links = ['biography', 'calendar', /*'gallery',*/ 'contact']
 
 	let scrollY: number = 0
 	let navigation: Navigation
-	let v2: boolean = false
-
-	onMount(() => {
-		v2 = $page.url.searchParams.has('2')
-	})
+	let v2: boolean = $page.url.searchParams.has('2')
 </script>
 
 <svelte:window bind:scrollY />
@@ -50,7 +48,7 @@
 
 <Biography />
 
-<Calendar />
+<Calendar events={data.calendarEvents} />
 
 <!-- <Gallery /> -->
 
