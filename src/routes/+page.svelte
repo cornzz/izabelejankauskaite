@@ -57,7 +57,7 @@
 <footer class="flex flex-col items-center justify-center gap-x-2 bg-[aliceblue] py-2 text-sm sm:flex-row">
 	<span>© {new Date().getFullYear()} Izabelė Jankauskaitė</span>
 	<span class="hidden sm:block">|</span>
-	<span><a href="https://corny.me" class="underline" target="_blank">Design</a></span>
+	<span>Design by <a href="https://corny.me" class="underline" target="_blank">ck</a></span>
 </footer>
 
 <style lang="postcss">
