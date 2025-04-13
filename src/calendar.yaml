@@ -1,35 +1,37 @@
 # lastDate: MM/DD/YYYY
-  
+# Bold text: <b>text</b>
+# Italic text: <i>text</i>
+
 - title: Zuger Sinfonietta
   dates: 13th and 14th of December 2025
   program: |
-    E. Grieg: Two nordic melodies for string orchestra
-    R. Schumann: Klavierkonzert
-    J. Svendsen: Symphony Nr. 2
+    <b>E. Grieg</b>: Two nordic melodies for string orchestra
+    <b>R. Schumann</b>: Klavierkonzert
+    <b>J. Svendsen</b>: Symphony Nr. 2
   lastDate: 12/14/2025
 
 - title: Münchner Symphoniker
   dates: 4th of December 2025
   program: |
-    Béla Bartók: Hungarian pictures  
-    Wolfgang Amadeus Mozart: Klavierkonzert Nr. 20 d-Moll KV 466  
-    Ludwig van Beethoven: Symphonie Nr. 2 D-Dur op. 36 
+    <b>Béla Bartók</b>: Hungarian pictures  
+    <b>Wolfgang Amadeus Mozart</b>: Klavierkonzert Nr. 20 d-Moll KV 466  
+    <b>Ludwig van Beethoven</b>: Symphonie Nr. 2 D-Dur op. 36 
   lastDate: 12/4/2025
 
 - title: Jenaer Philharmonie
   dates: 22nd of November 2025
   program: |
-    Jean Sibelius: Kurkikohtaus
-    Wilhelm Stenhammar: Excelsior!, Sinfonische Ouvertüre, Op.13 
-    Grieg: Peer Gynt Suite Nr. 1 op. 46 und 2 op. 55
+    <b>Jean Sibelius</b>: Kurkikohtaus
+    <b>Wilhelm Stenhammar</b>: Excelsior!, Sinfonische Ouvertüre, Op.13 
+    <b>Grieg</b>: Peer Gynt Suite Nr. 1 op. 46 und 2 op. 55
   lastDate: 11/22/2025
 
 - title: Malmö Symphony Orchestra
   dates: 13th and 15th of November 2025
   program: |
-    Gabriela Ortiz: Clara (2021) für Orchester  
-    Clara Schumann: Klavierkonzert a-Moll op. 7 
-    Johannes Brahms: Serenade Nr. 2 A-Dur op. 16 
+    <b>Gabriela Ortiz</b>: Clara (2021) für Orchester  
+    <b>Clara Schumann</b>: Klavierkonzert a-Moll op. 7 
+    <b>Johannes Brahms</b>: Serenade Nr. 2 A-Dur op. 16 
   lastDate: 11/15/2025
 
 - title: Orchestre de chambre de Paris
@@ -43,54 +45,54 @@
 - title: Gulbenkian Orchestra
   dates: 17th through 19th of July 2025
   program: |
-    Edward Elgar: Concerto in B minor for Violin and Orchestra, Opus 61
-    Tarrodi: Camelopardalis 
-    Ludwig van Beethoven: Symphony No. 4 in B-flat major, Opus 60
+    <b>Edward Elgar</b>: Concerto in B minor for Violin and Orchestra, Opus 61
+    <b>Tarrodi</b>: Camelopardalis 
+    <b>Ludwig van Beethoven</b>: Symphony No. 4 in B-flat major, Opus 60
   lastDate: 7/19/2025
 
 - title: hr-Sinfonieorchester
   dates: 3rd and 4th of May 2025
   program: |
-    Music from Mozart, Saint-Saëns, Schumann, Grieg, Elgar & Co.
+    Music from <b>Mozart</b>, <b>Saint-Saëns</b>, <b>Schumann</b>, <b>Grieg</b>, <b>Elgar</b> & Co.
   link: https://www.hr-sinfonieorchester.de/konzerte/veranstaltungen-110~_month-2025-05.html
   lastDate: 5/4/2025
 
 - title: Tonkünstler-Orchester
   dates: 25th and 26th of April 2025
   program: |
-    Arvo Pärt Da pacem Domine
-    Carl Maria von Weber Konzert für Klarinette und Orchester Nr. 1 f-Moll op. 73
-    Robert Schumann Symphonie Nr. 1 B-Dur op. 38 Frühlingssymphonie
+    <b>Arvo Pärt</b>: Da pacem Domine
+    <b>Carl Maria von Weber</b>: Konzert für Klarinette und Orchester Nr. 1 f-Moll op. 73
+    <b>Robert Schumann</b>: Symphonie Nr. 1 B-Dur op. 38 Frühlingssymphonie
   link: https://www.tonkuenstler.at/de/konzerte?date=25-04-2025
   lastDate: 4/26/2025
 
 - title: Kammerorchester Basel
   dates: 10th and 11th of April 2025
   program: |
-    10th of April:
-    Bartók: Divertimento, BB 118 
-    Bartók: Violin Concerto No. 1, BB 48a
-    Schubert: Symphony No. 3 in D major, D. 200
-    11th of April: 
-    Franz Schubert Sinfonie Nr. 3 in D-Dur  
-    Béla Bartók Konzert für Violine und Orchester Nr. 1
+    <i>10th of April:</i>
+    <b>Bartók</b>: Divertimento, BB 118 
+    <b>Bartók</b>: Violin Concerto No. 1, BB 48a
+    <b>Schubert</b>: Symphony No. 3 in D major, D. 200<br>
+    <i>11th of April:</i>
+    <b>Franz Schubert</b>: Sinfonie Nr. 3 in D-Dur  
+    <b>Béla Bartók</b>: Konzert für Violine und Orchester Nr. 1
   link: https://www.kammerorchesterbasel.ch/en/concerts.html?location=basel%2Con_the_road&date=2025-4-1
   lastDate: 4/11/2025
 
 - title: Staatsorchester Darmstadt
   dates: 2nd and 3rd of March 2025
   program: |
-    Antonín Dvořák Cellokonzert h-Moll op. 104 
-    Jean Sibelius Sinfonie Nr. 2 D-Dur op. 43 
+    <b>Antonín Dvořák</b>: Cellokonzert h-Moll op. 104 
+    <b>Jean Sibelius</b>: Sinfonie Nr. 2 D-Dur op. 43 
   link: https://www.staatstheater-darmstadt.de/veranstaltungen/5-sinfoniekonzert.1754/
   lastDate: 3/3/2025
 
 - title: Sønderjyllands Symfoniorkester
   dates: 20th and 21st of February 2025
   program: |
-    F. Kuhlau: William Shakespeare Overture
-    E. Grieg: Piano concerto
-    L. van Beethoven: Symphony No. 3 (Eroica)
+    <b>F. Kuhlau</b>: William Shakespeare Overture
+    <b>E. Grieg</b>: Piano concerto
+    <b>L. van Beethoven</b>: Symphony No. 3 (Eroica)
   link: https://sdjsymfoni.dk/en/program/
   lastDate: 2/21/2025
 
