@@ -60,7 +60,7 @@
 				<CalendarItem {event} />
 			{/each}
 		</div>
-		<button on:click={togglePast} class="group mt-6 w-full lg:w-auto">
+		<button on:click={togglePast} class="group mt-6 w-full lg:w-auto text-lg">
 			<span class="underline">{showPast ? 'Hide' : 'Show'} past dates</span>
 			<span class="-ml-3 opacity-0 transition-all group-hover:-ml-1 group-hover:opacity-100">
 				&nbsp;
