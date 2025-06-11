@@ -5,16 +5,16 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-        font-family: 'Montserrat', sans-serif;
-        @apply text-[#333] scroll-smooth;
-    }
+	:root {
+		font-family: 'Montserrat', sans-serif;
+		@apply scroll-smooth text-[#333];
+	}
 
-    body {
-        @apply max-w-full overflow-x-hidden;
-    }
+	body {
+		@apply max-w-full overflow-x-hidden;
+	}
 
-    section {
-        @apply relative z-10 min-h-screen bg-[aliceblue];
-    }
+	section:not(.pswp__scroll-wrap) {
+		@apply relative z-10 min-h-screen bg-[aliceblue];
+	}
 }

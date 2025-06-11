@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { Biography, Calendar, Contact, /*Gallery,*/ Navigation } from '$lib'
+	import { Biography, Calendar, Contact, Gallery, Navigation } from '$lib'
 	import type { PageData } from './$types'
 
 	export let data: PageData
 
-	const links = ['biography', 'calendar', /*'gallery',*/ 'contact']
+	const links = ['biography', 'calendar', 'gallery', 'contact']
 
 	let scrollY: number = 0
 	let navigation: Navigation
@@ -47,7 +47,7 @@
 
 <Calendar events={data.calendarEvents} />
 
-<!-- <Gallery /> -->
+<Gallery />
 
 <Contact />
 
