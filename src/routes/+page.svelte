@@ -7,10 +7,11 @@
 	const links = ['biography', 'calendar', 'gallery', 'contact']
 
 	let scrollY: number = 0
+	let innerHeight: number = 0
 	let navigation: Navigation
 </script>
 
-<svelte:window bind:scrollY />
+<svelte:window bind:scrollY bind:innerHeight />
 
 <header
 	class="fixed top-0 z-0 h-screen w-screen bg-[url('/images/home.webp')] bg-cover bg-[33%_0] bg-no-repeat"
@@ -47,7 +48,7 @@
 
 <Calendar events={data.calendarEvents} />
 
-<Gallery />
+<Gallery {scrollY} {innerHeight} />
 
 <Contact />
 
