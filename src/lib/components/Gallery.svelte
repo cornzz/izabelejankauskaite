@@ -15,7 +15,7 @@
 			thumb: 'photo_1.jpg',
 			width: 1500,
 			height: 1000,
-			css: 'col-span-3 row-span-2 mb-[30vh] mx-[10%]'
+			css: 'col-span-3 row-span-2 mb-[30vh] sm:mx-[10%]'
 		},
 		{
 			large: 'photo_5.webp',
@@ -47,7 +47,7 @@
 			thumb: 'photo_3.jpg',
 			width: 2048,
 			height: 1366,
-			css: 'col-span-3 row-span-2 mb-[30vh] mx-[10%]'
+			css: 'col-span-3 row-span-2 mb-[30vh] sm:mx-[10%]'
 		},
 		{
 			large: 'photo_2.jpg',
@@ -61,7 +61,7 @@
 			thumb: 'photo_4.webp',
 			width: 3000,
 			height: 2000,
-			css: 'col-span-2 w-[calc((100%-4rem)/1.5)] ml-auto mb-[40vh] translate-x-[-15%]'
+			css: 'col-span-2 w-[calc((100%-4rem)/1.5)] ml-auto mb-[10vh] translate-x-[-15%]'
 		}
 	]
 
@@ -104,7 +104,7 @@
 <section
 	id="gallery"
 	class="before:sticky before:top-12 before:z-10 before:block before:h-[10vh] before:w-full before:bg-slate-300 before:opacity-[var(--opacity)]
-		   after:sticky after:bottom-0 after:z-10 after:block after:h-[10vh] after:w-full after:bg-slate-300 after:opacity-[var(--opacity)]"
+		   after:sticky after:bottom-[-20vh] after:z-10 after:block after:h-[30vh] after:w-full after:bg-slate-300 after:opacity-[var(--opacity)]"
 	style="--opacity: {smooth(scrollY, section?.offsetTop, section?.offsetTop)}"
 	bind:this={section}
 >
@@ -115,7 +115,7 @@
 		Gallery
 	</h1>
 
-	<div class="3xl:px-96 bg-slate-300 sm:px-32 2xl:px-64">
+	<div class="3xl:px-96 bg-slate-300 sm:px-36 2xl:px-64">
 		<div class="grid grid-cols-3 justify-center gap-2 sm:gap-16">
 			{#each gallery as photo, index}
 				<a
