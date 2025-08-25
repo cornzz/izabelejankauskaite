@@ -3,10 +3,10 @@
 	import { onMount } from 'svelte'
 
 	export let links: string[]
+	export let scrollY: number = -11
+	export let innerHeight: number = 0
 
 	let open: boolean = false
-	let innerHeight: number = 0
-	let scrollY: number = -11
 	let menu: HTMLElement
 	let menuItems: HTMLElement
 	let menuItemsOffset: number = 0
@@ -57,8 +57,6 @@
 		return () => observer.disconnect()
 	})
 </script>
-
-<svelte:window bind:innerHeight bind:scrollY />
 
 <button
 	class="fixed top-0 z-50 flex h-12 min-h-0 w-full transform justify-between overflow-hidden bg-[aliceblue]

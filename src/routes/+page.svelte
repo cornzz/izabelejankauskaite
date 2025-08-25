@@ -6,7 +6,7 @@
 
 	const links = ['biography', 'calendar', 'gallery', 'contact']
 
-	let scrollY: number = 0
+	let scrollY: number
 	let innerHeight: number = 0
 	let navigation: Navigation
 </script>
@@ -15,7 +15,7 @@
 
 <header
 	class="fixed top-0 z-0 h-screen w-screen bg-[url('/images/home.webp')] bg-cover bg-[33%_0] bg-no-repeat"
-	style="transform: translate3d(0, calc(-0.2 * {scrollY}px), 0)"
+	style="transform: translate3d(0, calc(-0.2 * {scrollY ?? 0}px), 0)"
 >
 	<nav class="animate-fadein-slow pl-6 pt-8 opacity-0 sm:pl-10 sm:pt-12">
 		<a
@@ -40,13 +40,13 @@
 	</nav>
 </header>
 
-<Navigation {links} bind:this={navigation} />
+<Navigation {links} {scrollY} {innerHeight} bind:this={navigation} />
 
 <div class="mt-[100vh]"></div>
 
 <Biography />
 
-<Calendar events={data.calendarEvents} />
+<Calendar events={data.calendarEvents} {scrollY} {innerHeight} />
 
 <Gallery {scrollY} {innerHeight} />
 
