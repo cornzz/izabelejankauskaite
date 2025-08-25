@@ -54,14 +54,14 @@
 			thumb: 'photo_2.jpg',
 			width: 1500,
 			height: 1000,
-			css: 'col-span-1 translate-x-[15%] w-[calc(100%*1.33)]'
+			css: 'col-span-1 sm:translate-x-[15%] w-[calc(100%*1.5)] sm:w-[calc(100%*1.3333)]'
 		},
 		{
 			large: 'photo_4.webp',
 			thumb: 'photo_4.webp',
 			width: 3000,
 			height: 2000,
-			css: 'col-span-2 w-[calc((100%-4rem)/1.5)] ml-auto mb-[10vh] translate-x-[-15%]'
+			css: 'col-span-2 sm:translate-x-[-15%] w-[calc((100%-0.5rem)/1.3333)] sm:w-[calc((100%-4rem)/1.5)] ml-auto mb-[10vh]'
 		}
 	]
 
@@ -115,7 +115,7 @@
 		Gallery
 	</h1>
 
-	<div class="3xl:px-96 bg-slate-300 sm:px-36 2xl:px-64">
+	<div class="3xl:px-96 bg-slate-300 lg:px-20 xl:px-36 2xl:px-64">
 		<div class="grid grid-cols-3 justify-center gap-2 sm:gap-16">
 			{#each gallery as photo, index}
 				<a
