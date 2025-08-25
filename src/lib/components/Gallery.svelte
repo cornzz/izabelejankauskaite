@@ -108,7 +108,6 @@
 	style="--opacity: {smooth(scrollY, section?.offsetTop, section?.offsetTop)}"
 	bind:this={section}
 >
-	<!-- py-48 -->
 	<h1
 		class="sticky top-0 -z-10 mt-[-10vh] flex h-screen flex-col justify-center bg-slate-300 text-center text-4xl sm:text-5xl"
 		style="opacity: {smooth(scrollY, section?.offsetTop - innerHeight / 4, section?.offsetTop)}"
@@ -116,8 +115,7 @@
 		Gallery
 	</h1>
 
-	<!-- mt-[35vh] -->
-	<div class="bg-slate-300 sm:px-32 2xl:px-64">
+	<div class="3xl:px-96 bg-slate-300 sm:px-32 2xl:px-64">
 		<div class="grid grid-cols-3 justify-center gap-2 sm:gap-16">
 			{#each gallery as photo, index}
 				<a
