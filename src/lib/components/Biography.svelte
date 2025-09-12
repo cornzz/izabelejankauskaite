@@ -18,7 +18,7 @@
 		/>
 	</div>
 	<div class="inline leading-loose xl:w-1/2 xl:px-12">
-		<h1 class="mb-5 text-2xl">Biography</h1>
+		<h1 class="mb-5 text-2xl sm:text-3xl">Biography</h1>
 		{#each bio.split('\n') as paragraph}
 			<p>{paragraph}</p>
 		{/each}

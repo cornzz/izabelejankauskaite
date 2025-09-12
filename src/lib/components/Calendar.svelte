@@ -4,13 +4,13 @@
 	import CalendarItem from './CalendarItem.svelte'
 
 	export let events: Event[]
+	export let scrollY: number = 0
+	export let innerHeight: number = 0
 
 	const today = new Date(+new Date().setHours(0, 0, 0, 0))
 
 	let section: HTMLElement
 	let title: HTMLHeadingElement
-	let scrollY: number = 0
-	let innerHeight: number = 0
 	let titleTop: number = 0
 	let showPast: boolean = false
 	let fixTitle: boolean = false
@@ -32,8 +32,6 @@
 
 	events.forEach((event) => (event.lastDate = new Date(event.lastDate)))
 </script>
-
-<svelte:window bind:scrollY bind:innerHeight />
 
 <section id="calendar" class="flex flex-col pt-12 lg:flex-row" bind:this={section}>
 	<div class="relative w-full bg-[aliceblue] lg:sticky lg:top-12 lg:h-0">
@@ -60,7 +58,7 @@
 				<CalendarItem {event} />
 			{/each}
 		</div>
-		<button on:click={togglePast} class="group mt-6 w-full lg:w-auto">
+		<button on:click={togglePast} class="group mt-6 w-full text-lg lg:w-auto">
 			<span class="underline">{showPast ? 'Hide' : 'Show'} past dates</span>
 			<span class="-ml-3 opacity-0 transition-all group-hover:-ml-1 group-hover:opacity-100">
 				&nbsp;
