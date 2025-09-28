@@ -27,7 +27,7 @@
 	{/if}
 
 	{#if event.program && showMore}
-		<div class="mb-4 mt-2" transition:slide>
+		<div class="mb-5 mt-3" transition:slide>
 			<p>{@html event.program.replaceAll('\n', '<br>')}</p>
 			{#if event.link}
 				<EventLink {event} />

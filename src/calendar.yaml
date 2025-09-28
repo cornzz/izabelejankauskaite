@@ -2,12 +2,40 @@
 # Bold text: <b>text</b>
 # Italic text: <i>text</i>
 
-- title: Zuger Sinfonietta
-  dates: 13th and 14th of December 2025
+- title: Orquesta de Extremadura
+  dates: 26th and 27th of February 2026
+  link: https://www.orquestadeextremadura.com/calendario/
+  lastDate: 2/27/2026
+
+- title: The Netherlands Philharmonic
+  dates: 12th and 13th of February 2026
+  lastDate: 2/13/2026
+
+- title: Nordwestdeutsche Philharmonie Herford
+  dates: Between 22nd of January and 1st of February 2026
   program: |
-    <b>E. Grieg</b>: Two nordic melodies for string orchestra
-    <b>R. Schumann</b>: Klavierkonzert
-    <b>J. Svendsen</b>: Symphony Nr. 2
+    <b>Raminta Šerkšnytė</b>: Midsummer Song
+    <b>Wolfgang Amadeus Mozart</b>: Klavierkonzert G-Dur KV 453
+    <b>Felix Mendelssohn Bartholdy</b>: Sinfonie Nr. 3 a-Moll op. 56 "Schottische"
+  link: https://www.nwd-philharmonie.de/konzert-detailseite/?k=87000&t=96617
+  lastDate: 2/1/2026
+
+- title: Aalborg Symphony Orchestra
+  dates: 16th of January 2026
+  program: |
+    <b>Wilhelm Stenhammar</b>: Excelsior! op. 13 
+    <b>Edvard Grieg</b>: Piano Concerto in A minor op. 16
+    <b>Jean Sibelius</b>: Symphony No. 2 op. 43
+  link: https://musikkenshus.dk/de-nordiske-komponister
+  lastDate: 1/16/2026
+
+- title: Zuger Sinfonietta
+  dates: 12th through 14th of December 2025
+  program: |
+    <b>Edvard Grieg</b>: Two nordic melodies for string orchestra
+    <b>Robert Schumann</b>: Klavierkonzert a-Moll op. 54
+    <b>Johan Svendsen</b>: Symphony Nr. 2
+  link: https://zugersinfonietta.ch/konzerte/
   lastDate: 12/14/2025
 
 - title: Münchner Symphoniker
@@ -15,27 +43,46 @@
   program: |
     <b>Béla Bartók</b>: Hungarian pictures  
     <b>Wolfgang Amadeus Mozart</b>: Klavierkonzert Nr. 20 d-Moll KV 466  
-    <b>Ludwig van Beethoven</b>: Symphonie Nr. 2 D-Dur op. 36 
+    <b>Ludwig van Beethoven</b>: Symphonie Nr. 2 D-Dur op. 36
+  link: https://www.muenchner-symphoniker.de/de/node/1565
   lastDate: 12/4/2025
 
 - title: Jenaer Philharmonie
   dates: 22nd of November 2025
   program: |
     <b>Jean Sibelius</b>: Kurkikohtaus
-    <b>Wilhelm Stenhammar</b>: Excelsior!, Sinfonische Ouvertüre, Op.13 
-    <b>Grieg</b>: Peer Gynt Suite Nr. 1 op. 46 und 2 op. 55
+    <b>Wilhelm Stenhammar</b>: Excelsior!, Sinfonische Ouvertüre, Op.13
+    <b>Edvard Grieg</b>: Peer Gynt Suite Nr. 1 op. 46 und 2 op. 55
+  link: https://www.jenaer-philharmonie.de/konzert/samstagskonzert-no-2-3.html
   lastDate: 11/22/2025
 
 - title: Malmö Symphony Orchestra
   dates: 13th and 15th of November 2025
   program: |
-    <b>Gabriela Ortiz</b>: Clara (2021) für Orchester  
-    <b>Clara Schumann</b>: Klavierkonzert a-Moll op. 7 
-    <b>Johannes Brahms</b>: Serenade Nr. 2 A-Dur op. 16 
+    <b>Gabriela Ortiz</b>: Clara (2021) für Orchester 
+    <b>Clara Schumann</b>: Klavierkonzert a-Moll op. 7
+    <b>Johannes Brahms</b>: Serenade Nr. 2 A-Dur op. 16
+  link: https://malmolive.se/en/program/to-clara-schumann-thursday
   lastDate: 11/15/2025
+
+- title: Lapland Chamber Orchestra
+  dates: 6th and 7th of November 2025
+  program: |
+    <b>Mikalojus Konstantinas Čiurlionis</b>: Bėkit, bareliai, arr. from a folk song, arr. for string orchestra Luca Pavan, Finnish premiere  
+    <b>Vaida Striaupaite-Beinarienė</b>: Laikas, Wind Quintet no 2, Finnish premiere  
+    <b>Gideon Klein</b>: Partita, String Trio, arr. for string orchestra Vojtech Saudek 
+    <b>Ludwig van Beethoven</b>: Triple Concerto in C major op. 56, arr. for chamber orchestra Detlev Glanert, Finnish premiere
+  link: https://korundi.fi/en/visit/lapland-chamber-orchestra/season-programme
+  lastDate: 11/7/2025
+
+- title: Luxembourg Philharmonic
+  dates: 24th and 25th of October 2025
+  link: https://www.philharmonie.lu/en/programme/2025-26/d-lotti-sicht-seng-noss-000000e9001ab8dd
+  lastDate: 10/25/2025
 
 - title: Orchestre de chambre de Paris
   dates: 12th and 13th of October 2025
+  link: https://www.orchestredechambredeparis.com/concert/le-cheval-debene/
   lastDate: 10/13/2025
 
 - title: Helsinki Philharmonic Orchestra
@@ -83,7 +130,7 @@
   dates: 2nd and 3rd of March 2025
   program: |
     <b>Antonín Dvořák</b>: Cellokonzert h-Moll op. 104 
-    <b>Jean Sibelius</b>: Sinfonie Nr. 2 D-Dur op. 43 
+    <b>Jean Sibelius</b>: Sinfonie Nr. 2 D-Dur op. 43
   link: https://www.staatstheater-darmstadt.de/veranstaltungen/5-sinfoniekonzert.1754/
   lastDate: 3/3/2025
 
@@ -135,7 +182,7 @@
   link: https://www.orquestadeextremadura.com/calendario/
   lastDate: 5/10/2024
 
-- title: Landesjugend­sinfonieorchester Hessen
+- title: Landesjugendsinfonieorchester Hessen
   dates: 19th, 20th and 21st of April 2024
   link: https://www.tauberphilharmonie.de/programm-tickets/veranstaltung/landesjugendorchester-hessen
   lastDate: 4/21/2024
