@@ -49,7 +49,7 @@
 			Calendar
 		</h1>
 	</div>
-	<div class="relative bg-[aliceblue] px-6 py-20 lg:w-1/2 lg:pl-8 lg:pr-12">
+	<div class="relative bg-[aliceblue] px-6 pb-10 pt-20 lg:w-1/2 lg:pl-8 lg:pr-12">
 		{#if !events.filter((ev) => !ev.lastDate || today <= ev.lastDate).length}
 			<p class="text-lg">No upcoming dates.</p>
 		{/if}
@@ -58,7 +58,7 @@
 				<CalendarItem {event} />
 			{/each}
 		</div>
-		<button on:click={togglePast} class="group mt-6 w-full text-lg lg:w-auto">
+		<button on:click={togglePast} class="group mx-auto mt-6 w-full text-lg">
 			<span class="underline">{showPast ? 'Hide' : 'Show'} past dates</span>
 			<span class="-ml-3 opacity-0 transition-all group-hover:-ml-1 group-hover:opacity-100">
 				&nbsp;
@@ -68,7 +68,7 @@
 			</span>
 		</button>
 		{#key showPast}
-			<div class="{showPast ? '' : 'hidden'} mt-12" transition:slide>
+			<div class="mt-16 {showPast ? '' : 'hidden'}" transition:slide>
 				{#each events.filter((ev) => ev.lastDate && today > ev.lastDate) as event (event)}
 					<CalendarItem {event} />
 				{/each}
