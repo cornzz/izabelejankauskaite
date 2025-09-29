@@ -22,15 +22,23 @@
 				</span>
 			</span>
 		</button>
-	{:else if event.link}
-		<EventLink {event} />
+	{:else if event.links?.length}
+		<div class="my-2 flex flex-wrap gap-x-2 gap-y-1">
+			{#each event.links as link}
+				<EventLink {link} />
+			{/each}
+		</div>
 	{/if}
 
 	{#if event.program && showMore}
 		<div class="mb-5 mt-3" transition:slide>
 			<p>{@html event.program.replaceAll('\n', '<br>')}</p>
-			{#if event.link}
-				<EventLink {event} />
+			{#if event.links?.length}
+				<div class="my-2 flex flex-wrap gap-x-2 gap-y-1">
+					{#each event.links as link}
+						<EventLink {link} />
+					{/each}
+				</div>
 			{/if}
 		</div>
 	{/if}
