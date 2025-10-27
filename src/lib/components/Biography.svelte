@@ -1,12 +1,21 @@
 <script lang="ts">
 	const bio: string = `
-		The 26-year-old Lithuanian conductor Izabelė Jankauskaitė first attracted international attention in 2022 when she won the Neeme Järvi Prize at the renowned Gstaad Conducting Academy. In the 2024/25 season, she assumes the role of Assistant Conductor of the hr-Sinfonieorchester. From August 2022 to June 2023 she held the same position at the Tonhalle-Orchester Zürich under Paavo Järvi.
-		In her new role in Frankfurt this season she will assist Alain Altinoglu, while also taking to the podium herself for multiple projects, such as the orchestra’s traditional New Year’s concert in Wiesbaden. In September 2024, she conducts Schubert’s first symphony in a concert with the Mozarteumorchester Salzburg. She also gives debuts with the MDR-Sinfonieorchester, Staatsorchester Darmstadt, Heidelberger Philharmoniker, Tonkünstler-Orchester Niederösterreich, Argovia Philharmonic, and Sønderjylland Symphony Orchestra. In January 2025, she returns to the Tonhalle-Orchester Zürich for a family concert. She will also lead an Education Project with the Royal Stockholm Philharmonic and appears with two different programmes with the Kammerorchester Basel in Switzerland and Budapest.
-		Izabelė Jankauskaitė has attended numerous master classes with conductors such as Jaap van Zweden, Kristjan Järvi, Baldur Brönnimann, Paavo Järvi, Leonid Grin, and James Lowe. In June 2023, she assisted Michael Tilson Thomas with the Tonhalle-Orchester Zürich. She has also worked with the Theater Orchester Biel Solothurn, Württembergischen Kammerorchester Heilbronn, Münchner Symphoniker, Musikkollegium Winterthur, and the Berner Symphonieorchester, among others. Further invitations have taken her to the Orchestre de Chambre de Lausanne, Orquesta de Extremadura, Athens State Orchestra, Filarmonica Banatul Timișoara, and to Folkwang Kammerorchester Essen. In autumn 2023, she assisted Nicholas Carter with an opera production of Puccini’s ‘Tosca’ at the Stadttheater Bern.
-		In 2017, she won first prize at the Jonas Aleksa Choir Conducting Competition. From 2019 to 2022 she was choir director of the Johannes Choir Mellingen and the Stadtsänger Winterthur.
-		Izabelė Jankauskaitė was born in Vilnius, Lithuania. She received her first music lessons at the National M. K. Čiurlionis School of Art and later took up vocal studies at the Lithuanian Academy of Music and Theatre. In 2018, she continued her musical education at the Zurich University of the Arts, initially in choral conducting. In 2020, she switched to orchestral conducting in the class of Prof. Johannes Schlaefli. She is currently studying in Zurich with Johannes Schlaefli and Christoph- Mathias Mueller.
-		Choral music had a significant impact on her development as a musician, and its influence is still evident in her nature, reflected in her conducting, expression, and lyricism.
-	`
+		Izabelė Jankauskaitė is among the most promising conductors of her generation. The Lithuanian conductor impresses with her inspiring presence on the podium, precise rehearsal technique, and striking stylistic versatility. Her artistic voice is increasingly recognised on the international stage, reflected in her growing presence on Europe’s concert platforms.
+
+		Jankauskaitė first attracted major attention in 2022 when she won the prestigious Neeme Järvi Prize at the Gstaad Conducting Academy. Since then, she has regularly appeared with renowned orchestras. In the 2024/25 season she served as Assistant Conductor of the hr-Sinfonieorchester Frankfurt, working closely with Chief Conductor Alain Altinoglu. From August 2022 to June 2023, she held the same position at the Tonhalle-Orchester Zürich under Paavo Järvi.
+
+		In the 2025/26 season, Izabelė Jankauskaitė returns to the Royal Stockholm Philharmonic, the Münchner Symphoniker and the Orquesta de Extremadura. Highlights of the season include her Finnish debuts with the Helsinki Philharmonic, Tapiola Sinfonietta and Lapland Chamber Orchestra, as well as her first UK appearance with the Royal Northern Sinfonia.
+
+		Further engagements take her to the symphony orchestras of Malmö and Aalborg, the Nordwestdeutsche Philharmonie Herford, the Jena Philharmonic, the Janáček Philharmonic Ostrava and the Zuger Sinfonietta. She also appears in a variety of family concert formats with the Orchestre de Chambre de Paris, Luxembourg Philharmonic, Antwerp Symphony Orchestra and Netherlands Philharmonic Orchestra. In June 2026 she makes her debut with the Copenhagen Philharmonic as part of the Tivoli Summer Classics Festival.
+
+		Izabelė Jankauskaitė has attended numerous masterclasses with conductors including Jaap van Zweden, Kristjan Järvi, Baldur Brönnimann, Paavo Järvi, Leonid Grin and James Lowe. In June 2023 she assisted Michael Tilson Thomas with the Tonhalle-Orchester Zürich. She has worked with Kammerorchester Basel, Argovia Philharmonic, Mozarteumorchester Salzburg, Tonkünstler-Orchester Niederösterreich, MDR-Sinfonieorchester, Staatsorchester Darmstadt, Philharmonisches Orchester Heidelberg, Münchner Symphoniker, Royal Stockholm Philharmonic, Sønderjylland Symphony Orchestra and Gulbenkian Orchestra. Further invitations have taken her to the Orchestre de Chambre de Lausanne, Folkwang Kammerorchester Essen, Orquesta de Extremadura, Athens State Orchestra and Filarmonica Banatul Timișoara. In autumn 2023 she assisted Nicholas Carter in a production of Puccini’s Tosca at the Stadttheater Bern.
+
+		Izabelė Jankauskaitė was born in Vilnius, Lithuania. She received her first musical training at the National M. K. Čiurlionis School of Art, later studying voice at the Lithuanian Academy of Music and Theatre. She continued her studies at the Zurich University of the Arts, initially specialising in choral conducting, and later in orchestral conducting with Professors Johannes Schlaefli and Christoph-Mathias Mueller.`
+
+	const paragraphs = bio
+		.split('\n')
+		.map((p) => p.trim())
+		.filter(Boolean)
 </script>
 
 <section id="biography" class="flex flex-col px-6 pb-32 pt-20 md:block lg:pt-32 xl:flex xl:flex-row-reverse xl:px-0">
@@ -19,7 +28,7 @@
 	</div>
 	<div class="inline leading-loose xl:w-1/2 xl:px-12">
 		<h1 class="mb-5 text-2xl sm:text-3xl">Biography</h1>
-		{#each bio.split('\n') as paragraph}
+		{#each paragraphs as paragraph}
 			<p>{paragraph}</p>
 		{/each}
 	</div>
