@@ -2,6 +2,18 @@
 # Bold text: <b>text</b>
 # Italic text: <i>text</i>
 
+- title: National Symphony Orchestra of Ireland
+  dates: 30th of June 2026
+  program: |
+    <b>Felix Mendelssohn Bartholdy</b>: The Hebrides Concert Overture, Op. 26
+    <b>Camille Saint-Saëns</b>: Introduction and Rondo Capriccioso in A minor, Op. 28
+    <b>Lili Boulanger</b>: D’un matin du printemps (1918) 
+    <b>Jules Massenet</b>: Méditation from Thaïs
+    <b>Camille Saint-Saëns</b>: Bacchanale from Act III of the opera Samson et Dalila
+  links:
+    - href: https://www.nch.ie/all-events-listing/nsoi-summer-lunchtime-30jun26/
+  lastDate: 6/30/2026
+
 - title: Copenhagen Philharmonic
   dates: 18th of June 2026
   lastDate: 6/18/2026
@@ -18,6 +30,17 @@
     - href: https://www.sedberghmusicfestival.com/index2026.html
       info: 05.06.
   lastDate: 6/6/2026
+
+- title: Sinfonieorchester Basel Orchestra
+  dates: 20th of May 2026
+  program: |
+    <b>Jean Sibelius</b>: Violin Concerto in D minor, Op. 47, 1st movement
+    <b>Isang Yun</b>: Concerto for flute and small orchestra
+    <b>Alexandra Pakhmutova</b>: Trumpet Concerto in E-flat major
+    <b>Sergei Rachmaninov</b>: Rhapsody on a Theme of Paganini, Op. 43
+  links:
+    - href: https://www.stadtcasino-basel.ch/de/programm/veranstaltungen/200526-schlusskonzert/
+  lastDate: 5/20/2026
 
 - title: Tapiola Sinfonietta
   dates: 14th of May 2026
@@ -51,6 +74,18 @@
     <b>Witold Lutosławski</b>: Dance Preludes
     <b>Béla Bartók</b>: Hungarian Sketches
   lastDate: 4/23/2026
+
+- title: Swedish Chamber Orchestra
+  dates: 16th of April 2026
+  program: |
+    <b>Béla Bartók</b>: Romanian Folk Dances, Sz.5
+    <b>Daniel Börtz</b>: Trumpet concerto
+    <b>Tobias Broström</b>: Sputnik
+    <b>Grazyna Bacewicz</b>: Concert for string orchestra
+    <b>Joseph Haydn</b>: Symphonie Nr. 96 D-Dur Hob. I:96 "The Miracle"
+  links:
+    - href: https://www.orebrokonserthus.com/evenemang/sputnik/
+  lastDate: 4/16/2026
 
 - title: Antwerp Symphony Orchestra
   dates: 12th and 13th of March 2026
