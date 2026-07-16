@@ -6,4 +6,5 @@ export type Photo = {
 	caption?: string
 	css?: string
 	style?: (...args: any[]) => string
+	video?: string
 }

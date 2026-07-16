@@ -54,14 +54,32 @@
 			thumb: 'photo_2.jpg',
 			width: 1500,
 			height: 1000,
-			css: 'col-span-1 sm:translate-x-[15%] w-[calc(100%*1.5)] sm:w-[calc(100%*1.3333)]'
+			css: 'col-span-1 sm:translate-x-[15%] w-[calc(100%*1.5)] sm:w-[calc(100%*1.3333)] mb-[25vh]'
 		},
 		{
 			large: 'photo_4.webp',
 			thumb: 'photo_4.webp',
 			width: 3000,
 			height: 2000,
-			css: 'col-span-2 sm:translate-x-[-15%] w-[calc((100%-0.5rem)/1.3333)] sm:w-[calc((100%-4rem)/1.5)] ml-auto mb-[10vh]'
+			css: 'col-span-2 sm:translate-x-[-15%] w-[calc((100%-0.5rem)/1.3333)] sm:w-[calc((100%-4rem)/1.5)] ml-auto mb-[25vh]'
+		},
+		{
+			large: 'maxresdefault_zmDwmrGN7jg.webp',
+			thumb: 'maxresdefault_zmDwmrGN7jg.webp',
+			width: 1280,
+			height: 720,
+			css: 'col-span-1 sm:translate-x-[15%] w-[calc(100%*1.5)] sm:w-[calc(100%*1.3333)] mb-[10vh]',
+			caption: 'Zoltán Kodály: Dances of Galánta',
+			video: 'https://www.youtube.com/watch?v=zmDwmrGN7jg'
+		},
+		{
+			large: 'maxresdefault_3MkH_YRdY08.webp',
+			thumb: 'maxresdefault_3MkH_YRdY08.webp',
+			width: 1280,
+			height: 720,
+			css: 'col-span-2 sm:translate-x-[-15%] w-[calc((100%-0.5rem)/1.3333)] sm:w-[calc((100%-4rem)/1.5)] ml-auto mb-[10vh]',
+			caption: 'Béla Bartók: Romanian Folk Dances, Sz. 56 BB 68',
+			video: 'https://www.youtube.com/watch?v=3MkH_YRdY08'
 		}
 	]
 
@@ -89,7 +107,7 @@
 	onMount(() => {
 		const lightbox = new PhotoSwipeLightbox({
 			gallery: '#gallery',
-			children: 'a',
+			children: 'a[data-pswp-width]',
 			imageClickAction: 'close',
 			tapAction: 'close',
 			pswpModule: () => import('photoswipe')
@@ -115,16 +133,18 @@
 		Gallery
 	</h1>
 
-	<div class="3xl:px-96 bg-slate-300 lg:px-20 xl:px-36 2xl:px-64">
+	<div class="bg-slate-300 lg:px-20 xl:px-36 2xl:px-64 3xl:px-96">
 		<div class="grid grid-cols-3 justify-center gap-2 sm:gap-16">
 			{#each gallery as photo, index}
 				<a
-					class="relative overflow-hidden {photo.css ?? ''}"
+					class="group relative block overflow-hidden {photo.css ?? ''}"
 					style={photo.style ? photo.style(getTranslate(index, scrollY)) : ''}
-					href="/images/gallery/{photo.large}"
-					data-pswp-width={photo.width}
-					data-pswp-height={photo.height}
+					href={photo.video ?? `/images/gallery/${photo.large}`}
+					data-pswp-width={photo.video ? undefined : photo.width}
+					data-pswp-height={photo.video ? undefined : photo.height}
 					target="_blank"
+					rel={photo.video ? 'noopener noreferrer' : undefined}
+					title={photo.video ? `Watch: ${photo.caption}` : photo.caption}
 					bind:this={photos[index]}
 				>
 					<img
@@ -132,8 +152,23 @@
 						src="/images/gallery/{photo.thumb}"
 						width={photo.width}
 						height={photo.height}
-						alt="Gallery Item"
+						alt={photo.video ? 'Video thumbnail' : 'Gallery Item'}
 					/>
+					{#if photo.video}
+						<span class="pointer-events-none absolute inset-0 flex items-center justify-center" aria-hidden="true">
+							<svg
+								class="w-[18%] max-w-[68px] opacity-80 drop-shadow-lg transition duration-200 group-hover:scale-110 group-hover:opacity-100"
+								viewBox="0 0 68 48"
+							>
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26zM45 24 27 14v20z"
+									fill="#fff"
+								/>
+							</svg>
+						</span>
+					{/if}
 					<span class="pswp-caption-content hidden">{photo.caption ?? ''}</span>
 				</a>
 			{/each}
