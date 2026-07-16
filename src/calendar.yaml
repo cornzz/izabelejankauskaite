@@ -2,6 +2,187 @@
 # Bold text: <b>text</b>
 # Italic text: <i>text</i>
 
+- title: Nordwestdeutsche Philharmonie
+  dates: 2nd, 4th and 5th of June 2027
+  program: |
+    <b>Mikalojus Konstantinas Čiurlionis</b>: Four Variations on the Lithuanian song “Bėkit, bareliai” for String Orchestra
+    <b>Sergej Rachmaninow</b>: Piano concerto Nr. 2 c-Moll op. 18
+    <b>Jean Sibelius</b>: Symphony Nr. 5 Es-Dur op. 82
+  links:
+    - href: https://www.nwd-philharmonie.de/konzert-detailseite/?k=87071&t=97486
+  lastDate: 6/5/2027
+
+- title: Norwegian Radio Orchestra
+  dates: 27th of May 2027
+  program: |
+    <b>Raminta Šerkšnytė</b>: Midsummer Song - for string orchestra and optional percussion (2009)
+    <b>Arnold Schönberg</b>: Notturno (1896) for String Orchestra and Harp
+    <b>Gustav Mahler</b>: Adagietto (from the Symphony Nr. 5)
+    <b>Arnold Schönberg</b>: Verklärte Nacht op. 4 for String Orchestra (1917 rev. 1943)
+  lastDate: 5/27/2027
+
+- title: Malmö Opera
+  dates: 15th of May 2027
+  program: |
+    <b>Wolfgang Amadeus Mozart</b>: opera production of "The Magic Flute"
+  lastDate: 5/15/2027
+
+- title: Berlin Radio Symphony Orchestra
+  dates: 13th of May 2027
+  program: |
+    TBA
+  links:
+    - href: https://www.rsb-online.de/en/concerts/storytelling-concert-hans-fallada/
+  lastDate: 5/13/2027
+
+- title: Malmö Opera
+  dates: 9th of May 2027
+  program: |
+    <b>Wolfgang Amadeus Mozart</b>: opera production of "The Magic Flute"
+  lastDate: 5/9/2027
+
+- title: Ostrobothnian Chamber Orchestra
+  dates: 7th of May 2027
+  program: |
+    TBA
+  lastDate: 5/7/2027
+
+- title: Malmö Opera
+  dates: 24th and 30th of April, 2nd of May 2027
+  program: |
+    <b>Wolfgang Amadeus Mozart</b>: opera production of "The Magic Flute"
+  lastDate: 5/2/2027
+
+- title: Gulbenkian Orchestra
+  dates: 22nd and 23rd of April 2027
+  program: |
+    <b>Raminta Šerkšnytė</b>: Iceberg Symphony
+    <b>Sergej Rachmaninoff</b>: Rhapsody on a Theme of Paganini, Op. 43 (1934)
+    <b>Antonín Dvořák</b>: Symphony Nr. 6 D-Dur op. 60 (1880)
+  links:
+    - href: https://gulbenkian.pt/musica/en/agenda/dvoraks-symphony-no-6/
+  lastDate: 4/23/2027
+
+- title: Philharmonisches Orchester Freiburg
+  dates: 13th and 14th of April 2027
+  program: |
+    <b>Robert Schumann</b>: Symphony Nr. 1 B-flat major op. 38 “The Spring Symphony”
+    <b>Robert Schumann</b>: Symphonie Nr. 4 d-Moll op. 120
+  links:
+    - href: https://theater.freiburg.de/de_DE/programm/7-sinfoniekonzert.1398856?event_date=17996139
+  lastDate: 4/14/2027
+
+- title: Malmö Opera
+  dates: 21st and 28th of March 2027
+  program: |
+    <b>Wolfgang Amadeus Mozart</b>: opera production of "The Magic Flute"
+  lastDate: 3/28/2027
+
+- title: NorrlandsOperan
+  dates: 18th of March 2027
+  program: |
+    <b>Kristine Tjøgersen</b>: Pelagic Dreamscape
+    <b>Kaija Saariaho</b>: Konzert für Harfe und Orchester "Trans" (2016)
+    <b>Ludwig van Beethoven</b>: Symphonie Nr. 6 F-Dur op. 68 “Pastorale”
+  links:
+    - href: https://norrlandsoperan.se/en/the-norrlandsoperan-symphony-orchestra/
+  lastDate: 3/18/2027
+
+- title: Malmö Opera
+  dates: 14th of March 2027
+  program: |
+    <b>Wolfgang Amadeus Mozart</b>: opera production of "The Magic Flute"
+  lastDate: 3/14/2027
+
+- title: hr-Sinfonieorchester
+  dates: 11th and 12th of March 2027
+  program: |
+    <b>Witold Lutosławski</b>: Kleine Suite
+    <b>Alberto Ginastera</b>: Harp Concerto (1956)
+    <b>Franz Schubert</b>: Symphony Nr. 3
+  links:
+    - href: https://www.hr-sinfonieorchester.de/konzerte/konzerte-26-27/saitenspruenge,quick-and-classy-saitenspruenge-100.html
+      info: 11.03.
+    - href: https://www.hr-sinfonieorchester.de/konzerte/konzerte-26-27/konzertestadttheater-giessen,konzerte-in-hessen-giessen-112.html
+      info: 12.03.
+  lastDate: 3/12/2027
+
+- title: BBC Philharmonic Orchestra
+  dates: 17th of February 2027
+  program: |
+    <b>Lili Boulanger</b>: D’un matin du printemps (1918)
+    <b>Maurice Ravel</b>: Ma Mère l'Oye - Suite for Orchestra
+    <b>Ester Mägi</b>: "Poem" for String orchestra
+    <b>Mieczysław Weinberg</b>: Sinfonietta Nr. 1
+  links:
+    - href: https://www.bbc.co.uk/events/ezcwxj
+  lastDate: 2/17/2027
+
+- title: Orchestre National Bordeaux Aquitaine
+  dates: 2nd and 4th of December 2026
+  program: |
+    <b>Wolfgang Amadeus Mozart</b>: Overture from “Don Giovanni”
+    <b>Gioachino Rossini</b>: Concerto for Bassoon and Orchestra
+    <b>Joseph Haydn</b>: Symphony No. 102 in B-flat major
+  links:
+    - href: https://www.opera-bordeaux.com/orchestre-concert-rencontre-85371#apropos
+  lastDate: 12/4/2026
+
+- title: Orchestre de chambre de Paris
+  dates: 16th of November 2026
+  program: |
+    <b>Joseph Haydn</b>: Symphony No. 49 in F minor 'La Passione'
+    <b>Wolfgang Amadeus Mozart</b>: Piano Concerto KV 595
+    <b>Arnold Schoenberg</b>: Verklärte Nacht, Op.4 (version from 1943)
+  links:
+    - href: https://www.chatelet.com/programmation/26-27/nuits-transfigurees/
+  lastDate: 11/16/2026
+
+- title: Swiss Youth Symphony Orchestra
+  dates: 30th of October and 1st, 4th, 5th and 8th of November 2026
+  program: |
+    <b>Edvard Grieg</b>: Norwegian dances
+    <b>Einojuhani Rautavaara</b>: Cantus Arcticus op. 61 - "Concerto for birds and orchestra" (1972)
+    <b>Jean Sibelius</b>: Symphony Nr. 5 Es-Dur op. 82
+  links:
+    - href: https://sjso.ch
+  lastDate: 11/8/2026
+
+- title: Orchestre Symphonique de Québec
+  dates: 7th of October 2026
+  program: |
+    <b>Mieczysław Weinberg</b>: Sinfonietta No. 1
+    <b>Dmitrij Schostakowitsch</b>: Concerto for Piano, Trumpet and String Orchestra Nr. 1 c-Moll op. 35 with Trumpet (1933)
+    <b>Carl Maria von Weber</b>: Overture "Der Freischütz" (1820)
+    <b>Ludwig van Beethoven</b>: Symphonie Nr. 8 F-Dur op. 93
+  links:
+    - href: https://www.osq.org/concerts/la-8e-de-beethoven/
+  lastDate: 10/7/2026
+
+- title: Royal Scottish National Orchestra
+  dates: 22nd and 23rd of September 2026
+  program: |
+    <b>Witold Lutosławski</b>: Little Suite (Mala Suita) for Chamber Orchestra (1950)
+    <b>Nino Rota</b>: Concerto for Trombone and Orchestra C-Dur (1966)
+    <b>Wolfgang Amadeus Mozart</b>: Symphony Nr. 33 B-Dur KV 319
+  links:
+    - href: https://www.rsno.org.uk/liveevent/rsno-plays-rota-mozart/
+  lastDate: 9/23/2026
+
+- title: hr-Sinfonieorchester
+  dates: 21st of August 2026
+  program: |
+    <b>Hector Berlioz</b>: Hungarian March from La Damnation de Faust
+    <b>Richard Galliano</b>: Opale Concerto for accordion and orchestra
+    <b>Pyotr Tchaikovsky</b>: Capriccio Italien
+    <b>Edvard Grieg</b>: Three Pieces from Peer Gynt
+    <b>Astor Piazzolla</b>: Libertango
+    <b>Astor Piazzolla</b>: Oblivion
+    <b>George Gershwin</b>: An American in Paris
+  links:
+    - href: https://www.eckelshausener-musiktage.de
+  lastDate: 8/21/2026
+
 - title: National Symphony Orchestra of Ireland
   dates: 30th of June 2026
   program: |
