@@ -1,101 +1,110 @@
-# lastDate: MM/DD/YYYY
+# dates: chronological list of YYYY-MM-DD
 # Bold text: <b>text</b>
 # Italic text: <i>text</i>
 
 - title: Nordwestdeutsche Philharmonie
-  dates: 2nd, 4th and 5th of June 2027
+  dates:
+    - 2027-06-02
+    - 2027-06-04
+    - 2027-06-05
   program: |
     <b>Mikalojus Konstantinas Čiurlionis</b>: Four Variations on the Lithuanian song “Bėkit, bareliai” for String Orchestra
     <b>Sergej Rachmaninow</b>: Piano concerto Nr. 2 c-Moll op. 18
     <b>Jean Sibelius</b>: Symphony Nr. 5 Es-Dur op. 82
   links:
     - href: https://www.nwd-philharmonie.de/konzert-detailseite/?k=87071&t=97486
-  lastDate: 6/5/2027
 
 - title: Norwegian Radio Orchestra
-  dates: 27th of May 2027
+  dates:
+    - 2027-05-27
   program: |
     <b>Raminta Šerkšnytė</b>: Midsummer Song - for string orchestra and optional percussion (2009)
     <b>Arnold Schönberg</b>: Notturno (1896) for String Orchestra and Harp
     <b>Gustav Mahler</b>: Adagietto (from the Symphony Nr. 5)
     <b>Arnold Schönberg</b>: Verklärte Nacht op. 4 for String Orchestra (1917 rev. 1943)
-  lastDate: 5/27/2027
 
 - title: Malmö Opera
-  dates: 15th of May 2027
+  dates:
+    - 2027-05-15
   program: |
     <b>Wolfgang Amadeus Mozart</b>: opera production of "The Magic Flute"
-  lastDate: 5/15/2027
 
 - title: Berlin Radio Symphony Orchestra
-  dates: 13th of May 2027
+  dates:
+    - 2027-05-13
   program: |
     TBA
   links:
     - href: https://www.rsb-online.de/en/concerts/storytelling-concert-hans-fallada/
-  lastDate: 5/13/2027
 
 - title: Malmö Opera
-  dates: 9th of May 2027
+  dates:
+    - 2027-05-09
   program: |
     <b>Wolfgang Amadeus Mozart</b>: opera production of "The Magic Flute"
-  lastDate: 5/9/2027
 
 - title: Ostrobothnian Chamber Orchestra
-  dates: 7th of May 2027
+  dates:
+    - 2027-05-07
   program: |
     TBA
-  lastDate: 5/7/2027
 
 - title: Malmö Opera
-  dates: 24th and 30th of April, 2nd of May 2027
+  dates:
+    - 2027-04-24
+    - 2027-04-30
+    - 2027-05-02
   program: |
     <b>Wolfgang Amadeus Mozart</b>: opera production of "The Magic Flute"
-  lastDate: 5/2/2027
 
 - title: Gulbenkian Orchestra
-  dates: 22nd and 23rd of April 2027
+  dates:
+    - 2027-04-22
+    - 2027-04-23
   program: |
     <b>Raminta Šerkšnytė</b>: Iceberg Symphony
     <b>Sergej Rachmaninoff</b>: Rhapsody on a Theme of Paganini, Op. 43 (1934)
     <b>Antonín Dvořák</b>: Symphony Nr. 6 D-Dur op. 60 (1880)
   links:
     - href: https://gulbenkian.pt/musica/en/agenda/dvoraks-symphony-no-6/
-  lastDate: 4/23/2027
 
 - title: Philharmonisches Orchester Freiburg
-  dates: 13th and 14th of April 2027
+  dates:
+    - 2027-04-13
+    - 2027-04-14
   program: |
     <b>Robert Schumann</b>: Symphony Nr. 1 B-flat major op. 38 “The Spring Symphony”
     <b>Robert Schumann</b>: Symphonie Nr. 4 d-Moll op. 120
   links:
     - href: https://theater.freiburg.de/de_DE/programm/7-sinfoniekonzert.1398856?event_date=17996139
-  lastDate: 4/14/2027
 
 - title: Malmö Opera
-  dates: 21st and 28th of March 2027
+  dates:
+    - 2027-03-21
+    - 2027-03-28
   program: |
     <b>Wolfgang Amadeus Mozart</b>: opera production of "The Magic Flute"
-  lastDate: 3/28/2027
 
 - title: NorrlandsOperan
-  dates: 18th of March 2027
+  dates:
+    - 2027-03-18
   program: |
     <b>Kristine Tjøgersen</b>: Pelagic Dreamscape
     <b>Kaija Saariaho</b>: Konzert für Harfe und Orchester "Trans" (2016)
     <b>Ludwig van Beethoven</b>: Symphonie Nr. 6 F-Dur op. 68 “Pastorale”
   links:
     - href: https://norrlandsoperan.se/en/the-norrlandsoperan-symphony-orchestra/
-  lastDate: 3/18/2027
 
 - title: Malmö Opera
-  dates: 14th of March 2027
+  dates:
+    - 2027-03-14
   program: |
     <b>Wolfgang Amadeus Mozart</b>: opera production of "The Magic Flute"
-  lastDate: 3/14/2027
 
 - title: hr-Sinfonieorchester
-  dates: 11th and 12th of March 2027
+  dates:
+    - 2027-03-11
+    - 2027-03-12
   program: |
     <b>Witold Lutosławski</b>: Kleine Suite
     <b>Alberto Ginastera</b>: Harp Concerto (1956)
@@ -105,10 +114,10 @@
       info: 11.03.
     - href: https://www.hr-sinfonieorchester.de/konzerte/konzerte-26-27/konzertestadttheater-giessen,konzerte-in-hessen-giessen-112.html
       info: 12.03.
-  lastDate: 3/12/2027
 
 - title: BBC Philharmonic Orchestra
-  dates: 17th of February 2027
+  dates:
+    - 2027-02-17
   program: |
     <b>Lili Boulanger</b>: D’un matin du printemps (1918)
     <b>Maurice Ravel</b>: Ma Mère l'Oye - Suite for Orchestra
@@ -116,40 +125,45 @@
     <b>Mieczysław Weinberg</b>: Sinfonietta Nr. 1
   links:
     - href: https://www.bbc.co.uk/events/ezcwxj
-  lastDate: 2/17/2027
 
 - title: Orchestre National Bordeaux Aquitaine
-  dates: 2nd and 4th of December 2026
+  dates:
+    - 2026-12-02
+    - 2026-12-04
   program: |
     <b>Wolfgang Amadeus Mozart</b>: Overture from “Don Giovanni”
     <b>Gioachino Rossini</b>: Concerto for Bassoon and Orchestra
     <b>Joseph Haydn</b>: Symphony No. 102 in B-flat major
   links:
     - href: https://www.opera-bordeaux.com/orchestre-concert-rencontre-85371#apropos
-  lastDate: 12/4/2026
 
 - title: Orchestre de chambre de Paris
-  dates: 16th of November 2026
+  dates:
+    - 2026-11-16
   program: |
     <b>Joseph Haydn</b>: Symphony No. 49 in F minor 'La Passione'
     <b>Wolfgang Amadeus Mozart</b>: Piano Concerto KV 595
     <b>Arnold Schoenberg</b>: Verklärte Nacht, Op.4 (version from 1943)
   links:
     - href: https://www.chatelet.com/programmation/26-27/nuits-transfigurees/
-  lastDate: 11/16/2026
 
 - title: Swiss Youth Symphony Orchestra
-  dates: 30th of October and 1st, 4th, 5th and 8th of November 2026
+  dates:
+    - 2026-10-30
+    - 2026-11-01
+    - 2026-11-04
+    - 2026-11-05
+    - 2026-11-08
   program: |
     <b>Edvard Grieg</b>: Norwegian dances
     <b>Einojuhani Rautavaara</b>: Cantus Arcticus op. 61 - "Concerto for birds and orchestra" (1972)
     <b>Jean Sibelius</b>: Symphony Nr. 5 Es-Dur op. 82
   links:
     - href: https://sjso.ch
-  lastDate: 11/8/2026
 
 - title: Orchestre Symphonique de Québec
-  dates: 7th of October 2026
+  dates:
+    - 2026-10-07
   program: |
     <b>Mieczysław Weinberg</b>: Sinfonietta No. 1
     <b>Dmitrij Schostakowitsch</b>: Concerto for Piano, Trumpet and String Orchestra Nr. 1 c-Moll op. 35 with Trumpet (1933)
@@ -157,20 +171,21 @@
     <b>Ludwig van Beethoven</b>: Symphonie Nr. 8 F-Dur op. 93
   links:
     - href: https://www.osq.org/concerts/la-8e-de-beethoven/
-  lastDate: 10/7/2026
 
 - title: Royal Scottish National Orchestra
-  dates: 22nd and 23rd of September 2026
+  dates:
+    - 2026-09-22
+    - 2026-09-23
   program: |
     <b>Witold Lutosławski</b>: Little Suite (Mala Suita) for Chamber Orchestra (1950)
     <b>Nino Rota</b>: Concerto for Trombone and Orchestra C-Dur (1966)
     <b>Wolfgang Amadeus Mozart</b>: Symphony Nr. 33 B-Dur KV 319
   links:
     - href: https://www.rsno.org.uk/liveevent/rsno-plays-rota-mozart/
-  lastDate: 9/23/2026
 
 - title: hr-Sinfonieorchester
-  dates: 21st of August 2026
+  dates:
+    - 2026-08-21
   program: |
     <b>Hector Berlioz</b>: Hungarian March from La Damnation de Faust
     <b>Richard Galliano</b>: Opale Concerto for accordion and orchestra
@@ -181,10 +196,10 @@
     <b>George Gershwin</b>: An American in Paris
   links:
     - href: https://www.eckelshausener-musiktage.de
-  lastDate: 8/21/2026
 
 - title: National Symphony Orchestra of Ireland
-  dates: 30th of June 2026
+  dates:
+    - 2026-06-30
   program: |
     <b>Felix Mendelssohn Bartholdy</b>: The Hebrides Concert Overture, Op. 26
     <b>Camille Saint-Saëns</b>: Introduction and Rondo Capriccioso in A minor, Op. 28
@@ -193,14 +208,16 @@
     <b>Camille Saint-Saëns</b>: Bacchanale from Act III of the opera Samson et Dalila
   links:
     - href: https://www.nch.ie/all-events-listing/nsoi-summer-lunchtime-30jun26/
-  lastDate: 6/30/2026
 
 - title: Copenhagen Philharmonic
-  dates: 18th of June 2026
-  lastDate: 6/18/2026
+  dates:
+    - 2026-06-18
 
 - title: Royal Northern Sinfonia
-  dates: 4th through 6th of June 2026
+  dates:
+    - 2026-06-04
+    - 2026-06-05
+    - 2026-06-06
   program: |
     <b>Grażyna Bacewicz</b>: Sinfonietta for String Orchestra
     <b>Wolfgang Amadeus Mozart</b>: Concerto for Clarinet and Orchestra in A major, K. 622
@@ -210,10 +227,10 @@
       info: 04.06.
     - href: https://www.sedberghmusicfestival.com/index2026.html
       info: 05.06.
-  lastDate: 6/6/2026
 
 - title: Sinfonieorchester Basel Orchestra
-  dates: 20th of May 2026
+  dates:
+    - 2026-05-20
   program: |
     <b>Jean Sibelius</b>: Violin Concerto in D minor, Op. 47, 1st movement
     <b>Isang Yun</b>: Concerto for flute and small orchestra
@@ -221,10 +238,10 @@
     <b>Sergei Rachmaninov</b>: Rhapsody on a Theme of Paganini, Op. 43
   links:
     - href: https://www.stadtcasino-basel.ch/de/programm/veranstaltungen/200526-schlusskonzert/
-  lastDate: 5/20/2026
 
 - title: Tapiola Sinfonietta
-  dates: 14th of May 2026
+  dates:
+    - 2026-05-14
   program: |
     <b>Jean Sibelius</b>: Suite Mignonne op. 98a 
     <b>Béla Bartók</b>: Romanian Folk Dances Sz. 68
@@ -234,30 +251,30 @@
     <b>Zoltán Kodály</b>: Dances of Galanta
   links:
     - href: https://tapiolasinfonietta.fi/konsertit/eleita/
-  lastDate: 5/14/2026
 
 - title: Royal Stockholm Philharmonic Orchestra
-  dates: 29th of April 2026
+  dates:
+    - 2026-04-29
   program: |
     <b>Béla Bartók</b>: Hungarian Sketches
     <b>Vítezslava Kaprálová</b>: Suite en miniature
     <b>Witold Lutosławski</b>: Concerto for Orchestra
   links:
     - href: https://www.konserthuset.se/en/programme/calendar/concert/2026/concerto-for-orchestra/20260429-1800/
-  lastDate: 4/29/2026
 
 - title: Janáček Philharmonic Orchestra
-  dates: 23rd of April 2026
+  dates:
+    - 2026-04-23
   program: |
     <b>Vítezslava Kaprálová</b>: Suite en miniature
     <b>Carl Nielsen</b>: Clarinet Concerto
     <b>Witold Lutosławski</b>: Little Suite for Chamber Orchestra
     <b>Witold Lutosławski</b>: Dance Preludes
     <b>Béla Bartók</b>: Hungarian Sketches
-  lastDate: 4/23/2026
 
 - title: Swedish Chamber Orchestra
-  dates: 16th of April 2026
+  dates:
+    - 2026-04-16
   program: |
     <b>Béla Bartók</b>: Romanian Folk Dances, Sz.5
     <b>Daniel Börtz</b>: Trumpet concerto
@@ -266,52 +283,63 @@
     <b>Joseph Haydn</b>: Symphonie Nr. 96 D-Dur Hob. I:96 "The Miracle"
   links:
     - href: https://www.orebrokonserthus.com/evenemang/sputnik/
-  lastDate: 4/16/2026
 
 - title: Antwerp Symphony Orchestra
-  dates: 12th and 13th of March 2026
+  dates:
+    - 2026-03-12
+    - 2026-03-13
   program: |
     <b>Hector Berlioz</b>: Symphonie fantastique, Op. 14
   links:
     - href: https://www.antwerpsymphonyorchestra.be/en/programma/school-performance-de-fantastische-symfonie-jgp5
-  lastDate: 3/13/2026
 
 - title: Orquesta de Extremadura
-  dates: 26th and 27th of February 2026
+  dates:
+    - 2026-02-26
+    - 2026-02-27
   program: |
     <b>Jean Sibelius</b>: Kurkikohtaus (“Scene with Cranes”) 
     <b>Camille Saint-Saëns</b>: Cello Concerto No. 1 in A minor, Op. 33 
     <b>Wilhelm Stenhammar</b>: Symphony No. 2 in G minor, Op. 34
   links:
     - href: https://www.orquestadeextremadura.com/conciertos-temporada/2025-2026-programa-08/
-  lastDate: 2/27/2026
 
 - title: The Netherlands Philharmonic
-  dates: 12th and 13th of February 2026
-  lastDate: 2/13/2026
+  dates:
+    - 2026-02-12
+    - 2026-02-13
 
 - title: Nordwestdeutsche Philharmonie Herford
-  dates: Between 22nd of January and 1st of February 2026
+  dates:
+    - 2026-01-22
+    - 2026-01-23
+    - 2026-01-24
+    - 2026-01-27
+    - 2026-01-28
+    - 2026-01-30
+    - 2026-02-01
   program: |
     <b>Raminta Šerkšnytė</b>: Midsummer Song
     <b>Wolfgang Amadeus Mozart</b>: Klavierkonzert G-Dur KV 453
     <b>Felix Mendelssohn Bartholdy</b>: Sinfonie Nr. 3 a-Moll op. 56 "Schottische"
   links:
     - href: https://www.nwd-philharmonie.de/konzert-detailseite/?k=87000&t=96617
-  lastDate: 2/1/2026
 
 - title: Aalborg Symphony Orchestra
-  dates: 16th of January 2026
+  dates:
+    - 2026-01-16
   program: |
     <b>Wilhelm Stenhammar</b>: Excelsior! op. 13 
     <b>Edvard Grieg</b>: Piano Concerto in A minor op. 16
     <b>Jean Sibelius</b>: Symphony No. 2 op. 43
   links:
     - href: https://musikkenshus.dk/de-nordiske-komponister
-  lastDate: 1/16/2026
 
 - title: Zuger Sinfonietta
-  dates: 12th through 14th of December 2025
+  dates:
+    - 2025-12-12
+    - 2025-12-13
+    - 2025-12-14
   program: |
     <b>Edvard Grieg</b>: Two nordic melodies for string orchestra
     <b>Robert Schumann</b>: Klavierkonzert a-Moll op. 54
@@ -323,30 +351,31 @@
       info: 13.12.
     - href: https://zugersinfonietta.ch/konzert/nordische-klaenge-2/
       info: 14.12.
-  lastDate: 12/14/2025
 
 - title: Münchner Symphoniker
-  dates: 4th of December 2025
+  dates:
+    - 2025-12-04
   program: |
     <b>Béla Bartók</b>: Hungarian pictures  
     <b>Wolfgang Amadeus Mozart</b>: Klavierkonzert Nr. 20 d-Moll KV 466  
     <b>Ludwig van Beethoven</b>: Symphonie Nr. 2 D-Dur op. 36
   links:
     - href: https://www.muenchner-symphoniker.de/de/node/1565
-  lastDate: 12/4/2025
 
 - title: Jenaer Philharmonie
-  dates: 22nd of November 2025
+  dates:
+    - 2025-11-22
   program: |
     <b>Jean Sibelius</b>: Kurkikohtaus
     <b>Wilhelm Stenhammar</b>: Excelsior!, Sinfonische Ouvertüre, Op.13
     <b>Edvard Grieg</b>: Peer Gynt Suite Nr. 1 op. 46 und 2 op. 55
   links:
     - href: https://www.jenaer-philharmonie.de/konzert/samstagskonzert-no-2-3.html
-  lastDate: 11/22/2025
 
 - title: Malmö Symphony Orchestra
-  dates: 13th and 15th of November 2025
+  dates:
+    - 2025-11-13
+    - 2025-11-15
   program: |
     <b>Gabriela Ortiz</b>: Clara (2021) für Orchester 
     <b>Clara Schumann</b>: Klavierkonzert a-Moll op. 7
@@ -356,10 +385,11 @@
       info: 13.11.
     - href: https://malmolive.se/en/program/to-clara-schumann-saturday
       info: 15.11.
-  lastDate: 11/15/2025
 
 - title: Lapland Chamber Orchestra
-  dates: 6th and 7th of November 2025
+  dates:
+    - 2025-11-06
+    - 2025-11-07
   program: |
     <b>Mikalojus Konstantinas Čiurlionis</b>: Bėkit, bareliai, arr. from a folk song, arr. for string orchestra Luca Pavan, Finnish premiere  
     <b>Vaida Striaupaite-Beinarienė</b>: Laikas, Wind Quintet no 2, Finnish premiere  
@@ -367,10 +397,11 @@
     <b>Ludwig van Beethoven</b>: Triple Concerto in C major op. 56, arr. for chamber orchestra Detlev Glanert, Finnish premiere
   links:
     - href: https://korundi.fi/en/visit/lapland-chamber-orchestra/season-programme
-  lastDate: 11/7/2025
 
 - title: Luxembourg Philharmonic
-  dates: 24th and 25th of October 2025
+  dates:
+    - 2025-10-24
+    - 2025-10-25
   program: |
     <b>Bedřich Smetana</b>: Vltava (Má vlast N° 2) (Auszug)
     <b>Paul Dukas</b>: L'Apprenti sorcier (Der Zauberlehrling) (Auszug).
@@ -379,46 +410,53 @@
     <b>Klaus Badelt</b>: Pirates of the Caribbean (arr. Ted Ricketts)
   links:
     - href: https://www.philharmonie.lu/en/programme/2025-26/unter-wasser-000000e90019f89c
-  lastDate: 10/25/2025
 
 - title: Orchestre de chambre de Paris
-  dates: 12th and 13th of October 2025
+  dates:
+    - 2025-10-12
+    - 2025-10-13
   links:
     - href: https://www.orchestredechambredeparis.com/concert/le-cheval-debene/
-  lastDate: 10/13/2025
 
 - title: Helsinki Philharmonic Orchestra
-  dates: 24th and 25th of September 2025
-  lastDate: 9/25/2025
+  dates:
+    - 2025-09-24
+    - 2025-09-25
 
 - title: Gulbenkian Orchestra
-  dates: 17th through 19th of July 2025
+  dates:
+    - 2025-07-17
+    - 2025-07-18
+    - 2025-07-19
   program: |
     <b>Edward Elgar</b>: Concerto in B minor for Violin and Orchestra, Opus 61
     <b>Tarrodi</b>: Camelopardalis 
     <b>Ludwig van Beethoven</b>: Symphony No. 4 in B-flat major, Opus 60
-  lastDate: 7/19/2025
 
 - title: hr-Sinfonieorchester
-  dates: 3rd and 4th of May 2025
+  dates:
+    - 2025-05-03
+    - 2025-05-04
   program: |
     Music from <b>Mozart</b>, <b>Saint-Saëns</b>, <b>Schumann</b>, <b>Grieg</b>, <b>Elgar</b> & Co.
   links:
     - href: https://www.hr-sinfonieorchester.de/konzerte/veranstaltungen-110~_month-2025-05.html
-  lastDate: 5/4/2025
 
 - title: Tonkünstler-Orchester
-  dates: 25th and 26th of April 2025
+  dates:
+    - 2025-04-25
+    - 2025-04-26
   program: |
     <b>Arvo Pärt</b>: Da pacem Domine
     <b>Carl Maria von Weber</b>: Konzert für Klarinette und Orchester Nr. 1 f-Moll op. 73
     <b>Robert Schumann</b>: Symphonie Nr. 1 B-Dur op. 38 Frühlingssymphonie
   links:
     - href: https://www.tonkuenstler.at/de/konzerte?date=25-04-2025
-  lastDate: 4/26/2025
 
 - title: Kammerorchester Basel
-  dates: 10th and 11th of April 2025
+  dates:
+    - 2025-04-10
+    - 2025-04-11
   program: |
     <i>10th of April:</i>
     <b>Bartók</b>: Divertimento, BB 118 
@@ -429,81 +467,94 @@
     <b>Béla Bartók</b>: Konzert für Violine und Orchester Nr. 1
   links:
     - href: https://www.kammerorchesterbasel.ch/en/concerts.html?location=basel%2Con_the_road&date=2025-4-1
-  lastDate: 4/11/2025
 
 - title: Staatsorchester Darmstadt
-  dates: 2nd and 3rd of March 2025
+  dates:
+    - 2025-03-02
+    - 2025-03-03
   program: |
     <b>Antonín Dvořák</b>: Cellokonzert h-Moll op. 104 
     <b>Jean Sibelius</b>: Sinfonie Nr. 2 D-Dur op. 43
   links:
     - href: https://www.staatstheater-darmstadt.de/veranstaltungen/5-sinfoniekonzert.1754/
-  lastDate: 3/3/2025
 
 - title: Sønderjyllands Symfoniorkester
-  dates: 20th and 21st of February 2025
+  dates:
+    - 2025-02-20
+    - 2025-02-21
   program: |
     <b>F. Kuhlau</b>: William Shakespeare Overture
     <b>E. Grieg</b>: Piano concerto
     <b>L. van Beethoven</b>: Symphony No. 3 (Eroica)
   links:
     - href: https://sdjsymfoni.dk/en/program/
-  lastDate: 2/21/2025
 
 - title: Tonhalle-Orchester Zürich
-  dates: 12th and 13th of January 2025
+  dates:
+    - 2025-01-12
+    - 2025-01-13
   links:
     - href: https://www.tonhalle-orchester.ch/konzerte/kalender/familienkonzert-konferenz-der-tiere-1871224
-  lastDate: 1/13/2025
 
 - title: hr-Sinfonieorchester
-  dates: 1st of January 2025
+  dates:
+    - 2025-01-01
   links:
     - href: https://meisterkonzerte-wiesbaden.de/konzerte/neujahrskonzert-in-wiener-tradition-hr-sinfonieorchester-guido-sant-anna
-  lastDate: 1/1/2025
 
 - title: Theater und Orchester Heidelberg
-  dates: 4th and 5th of December 2024
+  dates:
+    - 2024-12-04
+    - 2024-12-05
   links:
     - href: https://www.theaterheidelberg.de/de/produktionen/12551-rhapsody
-  lastDate: 12/5/2024
 
 - title: Argovia Philharmonic
-  dates: 25th through 27th of October 2024
+  dates:
+    - 2024-10-25
+    - 2024-10-26
+    - 2024-10-27
   links:
     - href: https://argoviaphil.ch/event/loewenkonzert-3
-  lastDate: 10/27/2024
 
 - title: MDR Sinfonieorchester
-  dates: 19th and 20th of October 2024
+  dates:
+    - 2024-10-19
+    - 2024-10-20
   links:
     - href: https://www.mdr.de/konzerte/konzertkalender/konzert4500_day-20_month-10_year-2024_zc-6fffa2b4.html
-  lastDate: 10/20/2024
 
 - title: Royal Stockholm Philharmonic
-  dates: 1st through 5th of October 2024
+  dates:
+    - 2024-10-01
+    - 2024-10-02
+    - 2024-10-03
+    - 2024-10-04
+    - 2024-10-05
   links:
     - href: https://www.konserthuset.se/en/programme/calendar/concert/2024/school-concert-baltic-the-environmental-robot/20241001-1100
-  lastDate: 10/5/2024
 
 - title: Kammerorchester Basel
-  dates: 8th of September 2024
-  lastDate: 9/8/2024
+  dates:
+    - 2024-09-08
 
 - title: Orquesta De Extremadura
-  dates: 9th and 10th of May 2024
+  dates:
+    - 2024-05-09
+    - 2024-05-10
   links:
     - href: https://www.orquestadeextremadura.com/calendario/
-  lastDate: 5/10/2024
 
 - title: Landesjugendsinfonieorchester Hessen
-  dates: 19th, 20th and 21st of April 2024
+  dates:
+    - 2024-04-19
+    - 2024-04-20
+    - 2024-04-21
   links:
     - href: https://www.tauberphilharmonie.de/programm-tickets/veranstaltung/landesjugendorchester-hessen
-  lastDate: 4/21/2024
 
 - title: Folkwang Kammerorchester
-  dates: 09th of March 2024
+  dates:
+    - 2024-03-09
   links:
     - href: https://www.folkwang-kammerorchester.de/konzerte-zollverein-philharmonie/#a2
-  lastDate: 3/9/2024

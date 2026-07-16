@@ -1,15 +1,26 @@
 <script lang="ts">
 	import type { Event } from '$lib/types'
+	import { formatDates } from '$lib/helpers'
 	import { slide } from 'svelte/transition'
 	import EventLink from './EventLink.svelte'
 
 	export let event: Event
+	export let separator: string | null = null
 
 	let showMore: boolean = false
 </script>
 
+{#if separator}
+	<div class="mb-9 flex items-center gap-4">
+		<hr class="grow border-[#333] opacity-25" />
+		<span class="shrink-0 text-sm italic text-[#333] opacity-40">{separator}</span>
+		<hr class="grow border-[#333] opacity-25" />
+	</div>
+{:else}
+	<hr class="mb-9 border-[#333] opacity-25" />
+{/if}
 <div class="mb-9">
-	<p class="italic">{event.dates}</p>
+	<p class="italic">{formatDates(event.dates)}</p>
 	<h2 class="mb-1 text-xl transition-all lg:text-2xl">{@html event.title}</h2>
 
 	{#if event.program}
@@ -43,4 +54,3 @@
 		</div>
 	{/if}
 </div>
-<hr class="mb-9 border-[#333] opacity-25 last:hidden" />
