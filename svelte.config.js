@@ -6,11 +6,9 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: adapter({
-			isr: {
-				expiration: 60 * 60
-			}
-		})
+		// ISR is configured per-route (see src/routes/+page.server.ts) so that only the
+		// public page is cached — the dynamic /admin routes must never be ISR-cached.
+		adapter: adapter()
 	}
 }
 

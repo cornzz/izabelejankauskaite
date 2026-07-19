@@ -13,6 +13,10 @@
 
 <svelte:window bind:scrollY bind:innerHeight />
 
+<svelte:head>
+	<title>Izabelė Jankauskaitė</title>
+</svelte:head>
+
 <header
 	class="fixed top-0 z-0 h-screen w-screen bg-[url('/images/home.webp')] bg-cover bg-[33%_0] bg-no-repeat"
 	style="transform: translate3d(0, calc(-0.2 * {scrollY ?? 0}px), 0)"
