@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { enhance } from '$app/forms'
+	import { onDestroy } from 'svelte'
 	import DatePicker from '$lib/components/admin/DatePicker.svelte'
+	import Spinner from '$lib/components/admin/Spinner.svelte'
 	import type { ProgramRow } from '$lib/helpers'
 	import { formatDates } from '$lib/helpers'
 	import type { SubmitFunction } from '@sveltejs/kit'
@@ -31,6 +33,23 @@
 	let links: LinkRow[] = [{ href: '', info: '' }]
 	let formKey = 0
 	let showPast = false
+	let savingEvent = false
+	let eventSaved = false
+	let eventSavedTimeout: ReturnType<typeof setTimeout>
+	let busy: string | null = null
+	let copied = false
+	let copiedTimeout: ReturnType<typeof setTimeout>
+
+	// Shared submit tracker for the secondary forms: spin the clicked button until done.
+	const track =
+		(id: string): SubmitFunction =>
+		() => {
+			busy = id
+			return async ({ update }) => {
+				await update()
+				busy = null
+			}
+		}
 
 	function resetForm() {
 		editingId = null
@@ -51,33 +70,41 @@
 		if (typeof document !== 'undefined') document.getElementById('event-form')?.scrollIntoView({ behavior: 'smooth' })
 	}
 
-	// Reset back to create-mode after a successful create/update.
+	// Reset back to create-mode after a successful create/update, then flash "Saved".
 	const submitEventForm: SubmitFunction = () => {
+		savingEvent = true
+		eventSaved = false
 		return async ({ result, update }) => {
 			await update()
-			if (result.type === 'success') resetForm()
+			savingEvent = false
+			if (result.type === 'success') {
+				resetForm()
+				eventSaved = true
+				clearTimeout(eventSavedTimeout)
+				eventSavedTimeout = setTimeout(() => (eventSaved = false), 2500)
+			}
 		}
 	}
 
 	function copy(text: string) {
 		navigator.clipboard?.writeText(text)
+		copied = true
+		clearTimeout(copiedTimeout)
+		copiedTimeout = setTimeout(() => (copied = false), 2000)
 	}
 
 	$: upcoming = data.events.filter((row) => today <= lastDate(row.dates)).reverse()
 	$: past = data.events.filter((row) => today > lastDate(row.dates))
 	$: shownConcerts = showPast ? past : upcoming
+
+	onDestroy(() => {
+		clearTimeout(eventSavedTimeout)
+		clearTimeout(copiedTimeout)
+	})
 </script>
 
 <div class="mx-auto max-w-3xl px-6 py-10">
-	<header class="mb-10 flex items-center justify-between">
-		<h1 class="text-3xl font-extralight">Calendar admin</h1>
-		<div class="flex items-center gap-4 text-sm">
-			{#if data.user}<span class="opacity-70">{data.user.name}</span>{/if}
-			<form method="post" action="?/logout" use:enhance>
-				<button type="submit" class="underline">Log out</button>
-			</form>
-		</div>
-	</header>
+	<h1 class="mb-10 text-3xl font-extralight">Calendar</h1>
 
 	<!-- Create / edit form -->
 	<div id="event-form" class="mb-14 rounded-lg bg-white/60 p-6 shadow-sm">
@@ -143,11 +170,15 @@
 
 			{#if form?.formError}<p class="text-sm text-red-700">{form.formError}</p>{/if}
 
-			<div class="flex gap-3">
-				<button type="submit" class={primaryButton}>{editingId ? 'Save changes' : 'Add concert'}</button>
+			<div class="flex items-center gap-3">
+				<button type="submit" disabled={savingEvent} class="{primaryButton} inline-flex items-center gap-2">
+					{#if savingEvent}<Spinner />{/if}
+					{savingEvent ? 'Saving…' : editingId ? 'Save changes' : 'Add concert'}
+				</button>
 				{#if editingId}
 					<button type="button" on:click={resetForm} class={ghostButton}>Cancel</button>
 				{/if}
+				{#if eventSaved}<span class="text-sm text-green-700">Saved</span>{/if}
 			</div>
 		</form>
 	</div>
@@ -180,15 +211,17 @@
 					</div>
 					<div class="flex shrink-0 items-center gap-3 text-sm">
 						<button on:click={() => startEdit(row)} class="underline">Edit</button>
-						<form method="post" action="?/delete" use:enhance>
+						<form method="post" action="?/delete" use:enhance={track(`delete:${row.id}`)}>
 							<input type="hidden" name="id" value={row.id} />
 							<button
 								type="submit"
-								class="text-red-700 underline"
+								disabled={busy === `delete:${row.id}`}
+								class="inline-flex items-center gap-1 text-red-700 underline disabled:opacity-60"
 								on:click={(event) => {
 									if (!confirm('Delete this concert?')) event.preventDefault()
 								}}
 							>
+								{#if busy === `delete:${row.id}`}<Spinner size="h-3.5 w-3.5" />{/if}
 								Delete
 							</button>
 						</form>
@@ -209,7 +242,13 @@
 				<p class="mb-2">Invite link for <strong>{form.invitedName}</strong> (valid 7 days, single use):</p>
 				<div class="flex items-center gap-2">
 					<code class="min-w-0 flex-1 truncate rounded bg-black/5 px-2 py-1">{form.inviteUrl}</code>
-					<button type="button" on:click={() => copy(form?.inviteUrl ?? '')} class={ghostButton}>Copy</button>
+					<button
+						type="button"
+						on:click={() => copy(form?.inviteUrl ?? '')}
+						class="{ghostButton} inline-flex items-center gap-1"
+					>
+						{copied ? 'Copied ✓' : 'Copy'}
+					</button>
 				</div>
 			</div>
 		{/if}
@@ -222,15 +261,17 @@
 						<span class="text-xs opacity-50">· {person.passkeys} passkey{person.passkeys === 1 ? '' : 's'}</span></span
 					>
 					{#if person.id !== data.user?.id}
-						<form method="post" action="?/removeUser" use:enhance>
+						<form method="post" action="?/removeUser" use:enhance={track(`removeUser:${person.id}`)}>
 							<input type="hidden" name="id" value={person.id} />
 							<button
 								type="submit"
-								class="text-sm text-red-700 underline"
+								disabled={busy === `removeUser:${person.id}`}
+								class="inline-flex items-center gap-1 text-sm text-red-700 underline disabled:opacity-60"
 								on:click={(event) => {
 									if (!confirm(`Remove ${person.name} and all their passkeys?`)) event.preventDefault()
 								}}
 							>
+								{#if busy === `removeUser:${person.id}`}<Spinner size="h-3.5 w-3.5" />{/if}
 								Remove
 							</button>
 						</form>
@@ -244,15 +285,25 @@
 		{#if form?.peopleError}<p class="mb-3 text-sm text-red-700">{form.peopleError}</p>{/if}
 
 		<div class="flex flex-wrap items-end gap-3">
-			<form method="post" action="?/invite" use:enhance class="flex items-end gap-2">
+			<form method="post" action="?/invite" use:enhance={track('invite')} class="flex items-end gap-2">
 				<label class="flex flex-col gap-1">
 					<span class="text-sm opacity-70">Invite a person</span>
 					<input name="name" placeholder="Name" class={inputClass} />
 				</label>
-				<button type="submit" class={primaryButton}>Invite</button>
+				<button type="submit" disabled={busy === 'invite'} class="{primaryButton} inline-flex items-center gap-2">
+					{#if busy === 'invite'}<Spinner />{/if}
+					Invite
+				</button>
 			</form>
-			<form method="post" action="?/addDevice" use:enhance>
-				<button type="submit" class={ghostButton}>Add a device for me</button>
+			<form method="post" action="?/addDevice" use:enhance={track('addDevice')}>
+				<button
+					type="submit"
+					disabled={busy === 'addDevice'}
+					class="{ghostButton} inline-flex items-center gap-2 disabled:opacity-60"
+				>
+					{#if busy === 'addDevice'}<Spinner />{/if}
+					Add a device for me
+				</button>
 			</form>
 		</div>
 	</div>

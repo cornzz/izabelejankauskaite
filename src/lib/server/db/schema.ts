@@ -13,6 +13,13 @@ export const events = pgTable('events', {
 	updatedAt: timestamp('updated_at', { withTimezone: true }).defaultNow().notNull()
 })
 
+// Editable single-value site content, keyed by name (e.g. 'biography').
+export const content = pgTable('content', {
+	key: text('key').primaryKey(),
+	value: text('value').notNull().default(''),
+	updatedAt: timestamp('updated_at', { withTimezone: true }).defaultNow().notNull()
+})
+
 export const users = pgTable('users', {
 	id: uuid('id').defaultRandom().primaryKey(),
 	name: text('name').notNull(),
@@ -41,6 +48,7 @@ export const credentials = pgTable('credentials', {
 })
 
 export type EventRow = typeof events.$inferSelect
+export type ContentRow = typeof content.$inferSelect
 export type UserRow = typeof users.$inferSelect
 export type InviteRow = typeof invites.$inferSelect
 export type CredentialRow = typeof credentials.$inferSelect

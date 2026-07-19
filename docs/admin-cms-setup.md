@@ -24,9 +24,13 @@ real browser — they can't be done from the repo alone. Do them in order.
 ## 2. Create the tables & migrate the calendar
 
 ```
-yarn db:push            # creates events / users / invites / credentials in Neon
+yarn db:push            # creates events / content / users / invites / credentials in Neon
 yarn calendar:migrate   # inserts the 57 rows from src/calendar.yaml
 ```
+
+(Re-run `yarn db:push` whenever the schema changes — e.g. it adds the `content` table that
+backs the editable biography. No data migration is needed for the biography: the public page
+shows the built-in default text until an admin first saves one under **Biography** in the panel.)
 
 Expected: `Inserted 57 events.` The migration also reports that **5** program lines are kept
 verbatim (composer=""): two `TBA`, the `Music from <b>Mozart</b>, …` prose line, and the two

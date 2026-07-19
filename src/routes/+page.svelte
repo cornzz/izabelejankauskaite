@@ -48,7 +48,7 @@
 
 <div class="mt-[100vh]"></div>
 
-<Biography />
+<Biography biography={data.biography} />
 
 <Calendar events={data.calendarEvents} {scrollY} {innerHeight} />
 

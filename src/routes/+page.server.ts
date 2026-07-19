@@ -1,6 +1,8 @@
 import { composeProgram } from '$lib/helpers'
 import { db } from '$lib/server/db'
 import { events } from '$lib/server/db/schema'
+import { getBiography } from '$lib/server/content'
+import { DEFAULT_BIOGRAPHY } from '$lib/defaultContent'
 import type { Event } from '$lib/types'
 import type { Config } from '@sveltejs/adapter-vercel'
 import type { PageServerLoad } from './$types'
@@ -17,7 +19,7 @@ export const config: Config = {
 
 export const load: PageServerLoad = async () => {
 	try {
-		const rows = await db.select().from(events)
+		const [rows, biography] = await Promise.all([db.select().from(events), getBiography()])
 
 		rows.sort((a, b) => (a.dates[0] < b.dates[0] ? 1 : a.dates[0] > b.dates[0] ? -1 : 0))
 
@@ -28,10 +30,10 @@ export const load: PageServerLoad = async () => {
 			links: row.links
 		}))
 
-		return { calendarEvents }
+		return { calendarEvents, biography }
 	} catch (error) {
-		console.error('Calendar DB unavailable; rendering an empty calendar.', error)
+		console.error('Public content DB unavailable; using empty calendar + default biography.', error)
 
-		return { calendarEvents: [] as Event[] }
+		return { calendarEvents: [] as Event[], biography: DEFAULT_BIOGRAPHY }
 	}
 }
