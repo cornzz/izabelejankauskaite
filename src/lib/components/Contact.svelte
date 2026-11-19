@@ -4,7 +4,7 @@
 		<div class="leading-8">
 			<h2 class="text-xl">General Management</h2>
 			Enrico Fischer<br />
-			<a href="tel:+49 30 5213 702-26">+49 30 5213 702-26</a><br />
+			<a href="tel:+49 30 521 37 02-26">+49 30 521 37 02-26</a><br />
 			<a href="mailto:enrico.fischer@kdschmid.de">enrico.fischer@kdschmid.de</a>
 		</div>
 		<hr class="m-auto w-32" />
@@ -17,9 +17,9 @@
 		<hr class="m-auto w-32" />
 		<div class="leading-8">
 			<h2 class="text-xl">Artist Coordination</h2>
-			Thaer Eid<br />
-			<a href="tel:+49 511 36607-76">+49 511 36607-76</a><br />
-			<a href="mailto:thaer.eid@kdschmid.de">thaer.eid@kdschmid.de</a>
+			Judith Jung<br />
+			<a href="tel:+49 30 521 37 02-28">+49 30 521 37 02-28</a><br />
+			<a href="mailto:judith.jung@kdschmid.de">judith.jung@kdschmid.de</a>
 		</div>
 	</div>
 </section>
